@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html class="root">
+<head>
+	<meta charset="utf-8"/>
+	<title>京东</title>
+	<link rel="icon" href ="./favicon.ico"/>
+	<meta name="description" content="面试作品"/>
+	<meta name="Keywords" content="luuxii.com"/>
+	<link rel="stylesheet" type="text/css" href="public/css/base.css"/>
+	<link rel="stylesheet" type="text/css" href="./public/css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="./public/css/index.css"/>
+
+	<script type="text/javascript" src="./public/js/sea.js"></script>
+	<script type="text/javascript" src="./public/js/ready.js"></script>
+	<script type="text/javascript">
+		ready(function(){
+			seajs.use("main.js")
+		})
+	</script>
+</head>
+<body>
+	<!-- top -->
+	<div id="shortcut">
+		<div class="hc">
+			<ul class="fl">
+				<li id="mycity" class="dropdown">
+					<div class="mouse_d dt">
+						送至：<span>北京</span>
+						<i class="icon">
+							<span>◇</span>
+						</i>
+					</div>
+					<div class="dd dorpdown_layer">
+						<ul class="area_list">
+							<li class="selected"><a href="javascript:;">北京</a></li>
+							<li><a href="javascript:;">上海</a></li>
+							<li><a href="javascript:;">天津</a></li>
+							<li><a href="javascript:;">重庆</a></li>
+							<li><a href="javascript:;">河北</a></li>
+							<li><a href="javascript:;">山西</a></li>
+							<li><a href="javascript:;">河南</a></li>
+							<li><a href="javascript:;">辽宁</a></li>
+							<li><a href="javascript:;">吉林</a></li>
+							<li><a href="javascript:;">黑龙江</a></li>
+							<li><a href="javascript:;">内蒙古</a></li>
+							<li><a href="javascript:;">江苏</a></li>
+							<li><a href="javascript:;">山东</a></li>
+							<li><a href="javascript:;">安徽</a></li>
+							<li><a href="javascript:;">浙江</a></li>
+							<li><a href="javascript:;">福建</a></li>
+							<li><a href="javascript:;">湖北</a></li>
+							<li><a href="javascript:;">湖南</a></li>
+							<li><a href="javascript:;">广东</a></li>
+							<li><a href="javascript:;">广西</a></li>
+							<li><a href="javascript:;">江西</a></li>
+							<li><a href="javascript:;">四川</a></li>
+							<li><a href="javascript:;">海南</a></li>
+							<li><a href="javascript:;">贵州</a></li>
+							<li><a href="javascript:;">云南</a></li>
+							<li><a href="javascript:;">西藏</a></li>
+							<li><a href="javascript:;">陕西</a></li>
+							<li><a href="javascript:;">甘肃</a></li>
+							<li><a href="javascript:;">青海</a></li>
+							<li><a href="javascript:;">宁夏</a></li>
+							<li><a href="javascript:;">新疆</a></li>
+							<li><a href="javascript:;">台湾</a></li>
+							<li><a href="javascript:;">香港</a></li>
+							<li><a href="javascript:;">澳门</a></li>
+							<li><a href="javascript:;">钓鱼岛</a></li>
+							<li><a href="javascript:;">海外</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<ul class="fr">
+				<li id="top_login">
+					<a href="javascript:;">你好，请登录</a>
+					<a href="javascript:;" class="a_red">免费注册</a>
+				
+				</li>
+				<li class="spacer"></li>	
+				<li>
+					<div class="dt">
+						<a href="javascript:;">我的订单</a>
+					</div>
+				
+				</li>
+				<li class="spacer"></li>
+				<li id="myjd" class="dropdown">
+					<div class="dt mo mouse_d">
+						<a href="javascript:;">我的京东</a>
+						<i class="icon">
+								<span>◇</span>
+						</i>
+					</div>
+					<div class="dd dorpdown_layer">
+						<div class="u_pic">
+							<a href="javascript:;"><img src="./public/images/no-img_mid.jpg"></a>
+						</div>
+						<div class="u_login">
+							<a href="javascript:;">你好，请登录</a>
+
+						</div>
+						<div class="u_msg">
+							<a href="javascript:;">优惠卷</a>
+							|           
+							<a href="javascript:;">消息</a>
+						</div>
+						<div class="otherlist">
+							<div class="fl l">
+								<a href="javascript:;">待处理订单</a>
+								<a href="javascript:;">咨询回复</a>
+								<a href="javascript:;">降价商品</a>
+								<a href="javascript:;">返修退换货</a>
+							</div>
+							<div class="fl r">
+								<a href="javascript:;">我的关注</a>
+								<a href="javascript:;">我的京豆</a>
+								<a href="javascript:;">我的理财</a>
+								<a href="javascript:;">京东白条</a>
+							</div>
+						</div>
+					</div>
+				
+				</li>
+				<li class="spacer"></li>
+				<li >
+					<div class="dt">
+						<a href="javascript:;">京东会员</a>
+					</div>
+				
+				</li>
+				<li class="spacer"></li>
+				<li>
+					<div class="dt">
+						<a href="javascript:;">企业采购</a>
+					</div>
+				
+				</li>
+				<li class="spacer"></li>
+				<li id="jdapp" class="dropdown">
+					<div class="dt mo mouse_d">
+						<i class="icon_left"></i>
+						<a href="javascript:;">手机京东</a>
+						<i class="icon">
+								<span>◇</span>
+						</i>
+					</div>
+					<div class="dorpdown_layer">
+						<div class="jd_app">
+							<a class="link link1" href="javascript:;">京东客户端</a>
+							<a class="link link2" href="javascript:;">京东钱包客户端</a>
+							<a class="link link3" href="javascript:;">新人专享188元大礼包</a>
+							<a class="link link4" href="javascript:;">扫一扫封顶立减999元</a>
+							<a class="applink jdapp-ios" href="javascript:;">京东客户端ios版</a>
+							<a class="applink jdapp-android" href="javascript:;">京东客户端android版</a>
+							<a class="applink jdapp-ipad"  href="javascript:;">京东客户端ipad版</a>
+							<a class="applink wyapp-ios" href="javascript:;">京东钱包客户端ios版</a>
+							<a class="applink wyapp-android" href="javascript:;">京东钱包客户端android版</a>
+						</div>
+						
+					</div>
+				
+				</li>
+				<li class="spacer"></li>
+				<li class="dropdown" id="gzjd">
+					<div class="dt mo mouse_d">
+						<a href="javascript:;">关注京东</a>
+						<i class="icon">
+								<span>◇</span>
+						</i>
+					</div>
+					<div class="dorpdown_layer">
+						<img src="./public/images/jdweidian.jpg" alt="关注京东">
+					</div>
+				
+				</li>
+				<li class="spacer"></li>
+				<li id="t_serve" class="dropdown">
+					<div class="dt mo mouse_d">
+						<a href="javascript:;">客户服务</a>
+						<i class="icon">
+								<span>◇</span>
+						</i>
+					</div>
+					<div class="dorpdown_layer">
+						<div class="client">客户</div>
+						<div>
+							<a href="javascript:;">帮助中心</a>
+							<a href="javascript:;">售后服务</a>
+							<a href="javascript:;">在线客服</a>
+							<a href="javascript:;">意见建议</a>
+							<a href="javascript:;">客服邮箱</a>
+						</div>
+						<div class="business">商户</div>
+						<div>
+							<a href="javascript:;">京东商学院</a>
+							
+						</div>
+					</div>
+				
+				</li>
+				<li class="spacer"></li>
+				<li id="top_navs" class="dropdown">
+					<div class="dt mo mouse_d">
+						<a href="javascript:;">网站导航</a>
+						<i class="icon">
+								<span>◇</span>
+						</i>
+					</div>
+					<div class="dorpdown_layer">
+						<dl>
+							<dt>特色主题</dt>
+							<dd>
+								<a href="javascript:;">品牌街</a>
+								<a href="javascript:;">好物100</a>
+								<a href="javascript:;">京东预售</a>
+								<a href="javascript:;">尖er货</a>
+								<a href="javascript:;">京东首发</a>
+								<a href="javascript:;">今日团购</a>
+								<a href="javascript:;">品牌街</a>
+								<a href="javascript:;">好物100</a>
+								<a href="javascript:;">京东预售</a>
+								<a href="javascript:;">尖er货</a>
+								<a href="javascript:;">京东首发</a>
+								<a href="javascript:;">今日团购</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt>行业频道</dt>
+							<dd>
+								<a href="javascript:;">服装城</a>
+								<a href="javascript:;">家用电器</a>
+								<a href="javascript:;">电脑办公</a>
+								<a href="javascript:;">手机</a>
+								<a href="javascript:;">美妆馆</a>
+								<a href="javascript:;">食品</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt>生活服务</dt>
+							<dd>
+								<a href="javascript:;">京东众筹</a>
+								<a href="javascript:;">理财</a>
+								<a href="javascript:;">彩票</a>
+								<a href="javascript:;">白条</a>
+								<a href="javascript:;">京东钱包</a>
+								<a href="javascript:;">京东小金库</a>
+								<a href="javascript:;">理财</a>
+								<a href="javascript:;">彩票</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt>更多精选</dt>
+							<dd>
+								<a href="javascript:;">京东社区</a>
+								<a href="javascript:;">京东通信</a>
+								<a href="javascript:;">在线读书</a>
+								<a href="javascript:;">京东E卡</a>
+								<a href="javascript:;">智能社区</a>
+								<a href="javascript:;">游戏社区</a>
+								<a href="javascript:;">京友邦</a>
+								<a href="javascript:;">卖家入驻</a>
+								<a href="javascript:;">企业采购</a>
+							</dd>
+						</dl>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--logo search  -->
+	<div class="hc">
+		<div id="logo">
+			<a href="javascript:;">京东</a>
+		</div>
+		<div id="search" class="fl">
+			<input id="key" class="fl"/>
+			<input id="sBtn" class="mouse_p fl" type="button"  value="搜索"/>
+			<div id="hotwords"  class="fl">
+				<a href="javascritp:;" target="_blank">199减100</a>
+				<a href="javascritp:;" target="_blank">1元疯抢</a>
+				<a href="javascritp:;" target="_blank">Z11 mini</a>
+				<a href="javascritp:;" target="_blank">抢免息券</a>
+				<a href="javascritp:;" target="_blank">0元试用</a>
+				<a href="javascritp:;" target="_blank">智能科技</a>
+				<a href="javascritp:;" target="_blank">粽子</a>
+				<a href="javascritp:;" target="_blank">连衣裙套装</a>
+			</div>
+		</div>
+		<div id="shopping_cart" class="fr dropdown">
+			<i class="shop_left"></i>
+			<i id="shopping_amount">0</i>
+			<a href="javascript:;">我的购物车</a>
+			<i class="shop_right">></i>
+		</div>
+		<span class="clr"></span>
+	</div>
+	<!-- nav -->
+	<div id="nav">
+		<div class="hc ">
+			<div id="categorys" class="fl">
+				<div class="dt">
+					<a target="_blank" href="javascript:;">全部商品分类</a>
+				</div>
+				<div class="dd" id="cateDrog">
+					<ul>
+						<li>
+						    <h3><a target="_blank" href="javascript:;">家用电器</a></h3><i>></i>
+						</li>
+						<li>
+						    <h3>
+						    	<a target="_blank" href="javascript:;">手机</a>、
+						    	<a target="_blank" href="javascript:;">数码</a>、
+						    	<a target="_blank" href="javascript:;">京东通信</a>
+						    </h3>
+						    <i>></i>
+						</li>
+						<li>
+						    <h3><a target="_blank" href="javascript:;">电脑、办公</a></h3><i>></i>
+						</li>
+						<li>
+						    <h3>
+						    	<a target="_blank" href="javascript:;">家居</a>、
+						    	<a target="_blank" href="javascript:;">家具</a>、
+						    	<a target="_blank" href="javascript:;">家装</a>、
+						    	<a target="_blank" href="javascript:;">厨具</a>
+						    </h3><i>></i>
+						</li>
+						<li>
+						    <h3>
+						    	<a target="_blank" href="javascript:;">男装</a>、
+						    	<a target="_blank" href="javascript:;">女装</a>、
+						    	<a target="_blank" href="javascript:;">童装</a>、
+						    	<a target="_blank" href="javascript:;">内衣</a>
+						    </h3><i>></i>
+						</li>
+						<li>
+						    <h3>
+						    	<a target="_blank" href="javascript:;">个护化妆</a>、
+						    	<a target="_blank" href="javascript:;">清洁用品</a>、
+						    	<a target="_blank" href="javascript:;">宠物</a>
+						    </h3><i>></i>
+						</li>
+						<li>
+						    <h3>
+						    	<a target="_blank" href="javascript:;">鞋靴</a>、
+						    	<a target="_blank" href="javascript:;">箱包</a>、
+						    	<a target="_blank" href="javascript:;">珠宝</a>、
+						    	<a target="_blank" href="javascript:;">奢侈品</a>
+						    </h3><i>></i>
+						</li>
+						<li>
+						    <h3>
+						    	<a target="_blank" href="javascript:;">运动户外</a>、
+						    	<a target="_blank" href="javascript:;">钟表</a>
+						    </h3><i>></i>
+						</li>
+						<li>
+						    <h3>
+						    	<a target="_blank" href="javascript:;">汽车</a>、
+						    	<a target="_blank" href="javascript:;">汽车用品</a>
+						    </h3><i>></i>
+						</li>
+						<li>
+						    <h3>
+						    	<a target="_blank" href="javascript:;">母婴</a>、
+						    	<a target="_blank" href="javascript:;">玩具乐器</a>
+						    </h3><i>></i>
+						</li>
+						<li>
+						    <h3>
+						    	<a target="_blank" href="javascript:;">食品</a>、
+						    	<a target="_blank" href="javascript:;">酒类</a>、
+						    	<a target="_blank" href="javascript:;">生鲜</a>、
+						    	<a target="_blank" href="javascript:;">特产</a>
+						    </h3><i>></i>
+						</li>
+						<li>
+						    <h3>
+						    	<a target="_blank" href="javascript:;">营养保健</a>
+						    </h3><i>></i>
+						</li>
+						<li>
+						    <h3>
+						    	<a target="_blank" href="javascript:;">图书</a>、
+						    	<a target="_blank" href="javascript:;">音像</a>、
+						    	<a target="_blank" href="javascript:;">电子书</a>
+						    </h3><i>></i>
+						</li>
+						<li>
+						    <h3>
+						    	<a target="_blank" href="javascript:;">彩票</a>、
+						    	<a target="_blank" href="javascript:;">旅行</a>、
+						    	<a target="_blank" href="javascript:;">充值</a>、
+						    	<a target="_blank" href="javascript:;">票务</a>
+						    </h3><i>></i>
+						</li>
+						<li>
+						    <h3>
+						    	<a target="_blank" href="javascript:;">理财</a>、
+						    	<a target="_blank" href="javascript:;">众筹</a>、
+						    	<a target="_blank" href="javascript:;">白条</a>、
+						    	<a target="_blank" href="javascript:;">保险</a>
+						    </h3><i>></i>
+						</li>
+					</ul>
+					<div class="dorpdown_layer">
+						<div id="category-item-1">
+							<div class="item-channels">
+								<a href="javascript:;">品牌日<i>></i></a>
+								<a href="javascript:;">家电城<i>></i></a>
+								<a href="javascript:;">智能生活馆<i>></i></a>
+								<a href="javascript:;">京东净化馆<i>></i></a>
+								<a href="javascript:;">京东帮服务店<i>></i></a>
+								<a href="javascript:;">值得买精选<i>></i></a>
+							</div>
+							<div class="subitems">
+								<dl class="fore1">
+									<dt><a href="javascript:;">大家电<i>></i></a></dt>
+									<dd>
+										
+										<a href="javascript:;">平板电视</a>
+										<a href="javascript:;">空调</a>
+										<a href="javascript:;">冰箱</a>
+										<a href="javascript:;">洗衣机</a>
+										<a href="javascript:;">家庭影院</a>
+										<a href="javascript:;"> DVD</a>
+										<a href="javascript:;">迷你音响</a>
+										<a href="javascript:;">冷柜/冰吧</a>
+										<a href="javascript:;">酒柜</a>
+										<a href="javascript:;">家电配件</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="javascript:;">厨卫大电<i>></i></a></dt>
+									<dd>
+										
+										<a href="javascript:;">油烟机</a>
+										<a href="javascript:;">燃气灶</a>
+										<a href="javascript:;">烟灶套装</a>
+										<a href="javascript:;">电热水器</a>
+										<a href="javascript:;">燃气热水器</a>
+										<a href="javascript:;"> 嵌入式厨电</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="javascript:;">厨房小电<i>></i></a></dt>
+									<dd>
+										
+										<a href="javascript:;">电饭煲</a>
+										<a href="javascript:;">微波炉</a>
+										<a href="javascript:;">电烤箱</a>
+										<a href="javascript:;">电磁炉</a>
+										<a href="javascript:;">电压力锅</a>
+										<a href="javascript:;"> 豆浆机</a>
+										<a href="javascript:;">咖啡机</a>
+										<a href="javascript:;">面包机</a>
+										<a href="javascript:;">榨汁机</a>
+										<a href="javascript:;">料理机</a>
+										<a href="javascript:;">电压力锅</a>
+										<a href="javascript:;">电饼铛</a>
+										<a href="javascript:;">养生壶/煎药壶</a>
+										<a href="javascript:;">酸奶机</a>
+										<a href="javascript:;">煮蛋器</a>
+										<a href="javascript:;">电水壶/热水瓶</a>
+										<a href="javascript:;">电炖锅</a>
+										<a href="javascript:;">多用途锅</a>
+										<a href="javascript:;">电烧烤炉</a>
+										<a href="javascript:;">电热饭盒</a>
+										<a href="javascript:;">电压力锅</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="javascript:;">生活电器<i>></i></a></dt>
+									<dd>
+									
+										<a href="javascript:;">电风扇</a>
+										<a href="javascript:;">冷风扇</a>
+										<a href="javascript:;">吸尘器</a>
+										<a href="javascript:;">净化器</a>
+										<a href="javascript:;">加湿器</a>
+										<a href="javascript:;">挂烫机/熨斗</a>
+										<a href="javascript:;">取暖电器</a>
+										<a href="javascript:;">电话机</a>
+										<a href="javascript:;">净水器</a>
+										<a href="javascript:;">饮水机</a>
+										<a href="javascript:;">干衣机</a>
+										<a href="javascript:;">清洁机</a>
+										<a href="javascript:;">收录/音机</a>
+										<a href="javascript:;">其它生活电器</a>
+										<a href="javascript:;">生活电器配件</a>									
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="javascript:;">个护健康<i>></i></a></dt>
+									<dd>
+									
+										<a href="javascript:;">剃须刀</a>
+										<a href="javascript:;">口腔护理</a>
+										<a href="javascript:;">电吹风</a>
+										<a href="javascript:;">美容器卷/直发器</a>
+										<a href="javascript:;">理发器</a>
+										<a href="javascript:;">剃/脱毛器</a>
+										<a href="javascript:;">足浴盆</a>
+										<a href="javascript:;">健康秤/厨房秤</a>
+										<a href="javascript:;">按摩器</a>
+										<a href="javascript:;">按摩椅</a>
+										<a href="javascript:;">血压计</a>
+										<a href="javascript:;">血糖仪</a>
+										<a href="javascript:;">体温计</a>
+										<a href="javascript:;">计步器/脂肪检测仪</a>
+										<a href="javascript:;">其它健康电器</a>									
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="javascript:;">五金家装<i>></i></a></dt>
+									<dd>
+									
+										<a href="javascript:;">电动工具</a>
+										<a href="javascript:;">手动工具</a>
+										<a href="javascript:;">仪器仪表</a>
+										<a href="javascript:;">浴霸/排气扇</a>
+										<a href="javascript:;">灯具</a>
+										<a href="javascript:;">LED灯</a>
+										<a href="javascript:;">洁身器</a>
+										<a href="javascript:;">水槽龙头</a>
+										<a href="javascript:;">淋浴花洒</a>
+										<a href="javascript:;">厨卫五金</a>
+										<a href="javascript:;">家具五金</a>
+										<a href="javascript:;">门铃电气</a>
+										<a href="javascript:;">体温计</a>
+										<a href="javascript:;">电工电料</a>
+										<a href="javascript:;">监控安防</a>									
+									</dd>
+								</dl>
+							</div>
+							<div class="brands">
+								<a href="javascript:;"><img src="./img/562f4971Na5379aba.jpg" alt=""></a>
+								<a href="javascript:;"><img src="./img/54d9eef9N5bb8d27f.jpg" alt=""></a>
+								<a href="javascript:;"><img src="./img/54d9ef02N99d26435.jpg" alt=""></a>
+								<a href="javascript:;"><img src="./img/54d9ef10Nd206a236.jpg" alt=""></a>
+								<a href="javascript:;"><img src="./img/54d9ef28N00328d44.jpg" alt=""></a>
+								<a href="javascript:;"><img src="./img/54d9ef34N7cc61f4c.jpg" alt=""></a>
+								<a href="javascript:;"><img src="./img/54d9ef3eN99aef1f0.jpg" alt=""></a>
+								<a href="javascript:;"><img src="./img/54d9ef4cN4fe57f9b.jpg" alt=""></a>
+							</div>
+							<div class="promotions">
+								<a href="javascript:;"><img src="./img/56aed295N3547d62e.jpg" alt=""></a>
+								<a href="javascript:;"><img src="./img/57237961N2b345399.jpg" alt=""></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="navitems" class="fl">
+				<ul >
+					<li><a href="javascript:;">服装城</a></li>
+					<li><a href="javascript:;">美妆馆</a></li>
+					<li><a href="javascript:;">超市</a></li>
+					<li><a href="javascript:;">全球购</a></li>
+					<li><a href="javascript:;">闪购</a></li>
+					<li><a href="javascript:;">团购</a></li>
+					<li><a href="javascript:;">拍卖</a></li>
+					<li><a href="javascript:;">金融</a></li>
+				</ul>
+			</div>
+			<span class="clr"></span>
+		</div>
+		
+	</div>
+	<!-- 轮播图 -->
+	<div id="focus" class="hc">	
+		<div class="slider">
+			<ul class="slider-main">
+				<li>
+					<a target="_blank" href="javascript:;"><img src="./img2/571d8e44N9f041e2d.jpg" alt=""/></img></a>
+				</li>
+				<li >
+					<a href="javascript:;"><img _src="./img2/5721bd89N78d959df.jpg" alt=""></img></a>
+				</li>
+				<li>
+					<a href="javascript:;"><img _src="./img2/5721ed7fN9813fe04.jpg" alt=""></img></a>
+				</li>
+				<li>
+					<a href="javascript:;"><img _src="./img2/572303caNb8af94ed.jpg" alt=""></img></a>
+				</li>
+				<li>
+					<a href="javascript:;"><img _src="./img2/57198611N2f564ca8.jpg" alt=""></img></a>
+				</li>
+				<li>
+					<a href="javascript:;"><img _src="./img2/57232932N4df4c058.jpg" alt=""></img></a>
+				</li>
+			</ul>
+			<div class="slider-extra">
+				<ul class="slider-nav">
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+					<li>6</li>
+				</ul>
+				<div class="slider-page">
+					<a class="slider-prev" href="javascript:;"><</a>
+					<a class="slider-next" href="javascript:;">></a>
+				</div>
+			</div>
+		</div>	
+		
+	</div>
+	<div id="focus-extra" class="hc">
+		<div id="news" class="w">
+			<div class="mt">
+				<h2 class="fl">京东快报</h2>
+				<div class="extra">
+					<a target="_blank" href="javascript:;">更多 ></a>
+				</div>
+
+			</div>
+			<div class="mc">
+				<ul>
+					<li>
+						<a href="javascript:;">
+							<span>[特惠]</span>
+							京东汽车用品节 满200减100
+						</a>
+
+					</li>
+					<li>
+						<a href="javascript:;">
+							<span>[公告]</span>
+							大连柳州开仓 211限时达扩大
+						</a>
+						
+					</li>
+					<li>
+						<a href="javascript:;">
+							<span>[特惠]</span>
+							团购5周年，9.9元抢大牌！
+						</a>
+						
+					</li>
+					<li>
+						<a href="javascript:;">
+							<span>[公告]</span>
+							京东自营山东大樱桃开启预售
+						</a>
+						
+					</li>
+					<li>
+						<a href="javascript:;">
+							<span>[特惠]</span>
+							文具每满199减100惠战到底
+						</a>
+						
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="lifeserv" class="w">
+			<div class="mt">
+		        <h2>生活服务</h2>
+		    </div>
+		    <div class="mc">
+				<ul>
+					<li>
+						<a class="cw-icon" href="javascript:;">
+							<i class="ci-left"></i>
+							<span>话费</span>
+						</a>
+					</li>
+					<li>
+						<a class="cw-icon" href="javascript:;">
+							<i class="ci-left"></i>
+							<span>机票</span>
+						</a>
+					</li>
+					<li>
+						<a class="cw-icon" href="javascript:;">
+							<i class="ci-left"></i>
+							<span>电影票</span>
+						</a>
+					</li>
+					<li>
+						<a class="cw-icon" href="javascript:;">
+							<i class="ci-left"></i>
+							<span>游戏</span>
+						</a>
+					</li>
+					<li>
+						<a class="cw-icon" href="javascript:;">
+							<i class="ci-left"></i>
+							<span>彩票</span>
+						</a>
+					</li>
+					<li>
+						<a class="cw-icon" href="javascript:;">
+							<i class="ci-left"></i>
+							<span>团购</span>
+						</a>
+					</li>
+					<li>
+						<a class="cw-icon" href="javascript:;">
+							<i class="ci-left"></i>
+							<span>酒店</span>
+						</a>
+					</li>
+					<li>
+						<a class="cw-icon" href="javascript:;">
+							<i class="ci-left"></i>
+							<span>火车票</span>
+						</a>
+					</li>
+					<li>
+						<a class="cw-icon" href="javascript:;">
+							<i class="ci-left"></i>
+							<span>众筹</span>
+						</a>
+					</li>
+					<li>
+						<a class="cw-icon" href="javascript:;">
+							<i class="ci-left"></i>
+							<span>理财</span>
+						</a>
+					</li>
+					<li>
+						<a class="cw-icon" href="javascript:;">
+							<i class="ci-left"></i>
+							<span>礼品卡</span>
+						</a>
+					</li>
+					<li>
+						<a class="cw-icon" href="javascript:;">
+							<i class="ci-left"></i>
+							<span>白条</span>
+						</a>
+					</li>
+				</ul>
+				<div class="mc-inner hide">
+					<a class="close"></a>
+					<div class="hide"></div>
+					<div class="hide"></div>
+					<div class="hide"></div>
+					<div class="hide"></div>
+				</div>
+			</div>
+		</div>
+		<div id="right-pic" class="w">
+			<a href="javascript:;">
+				<img src="img/572ae464Ne8e5aa6f.jpg" alt="">
+			</a>
+		</div>
+	</div>
+	<!--今日推荐  -->
+	<div class="lazy-wrap">
+		<div id="lazy-todays" class="hc lazy-fn" data-id="today">
+			
+		</div>
+		<!--猜你喜欢-->
+		<div id="lazy-guess-like" class="hc lazy-fn" data-id="like">
+			
+		</div>
+		
+		<div id="lazy-special-buy" class="hc lazy-fn" data-id="buy">
+		</div>
+	</div>
+	<div class="lazy-wrap  hc">
+		<div id="lazy-floor-banner-1" class="lazy-fn" data-id="floorBanner1">
+			<div class="floor-banner">
+				<div class="floor-banner-main">
+					<a href="javascript:;">
+						<img src="./img/573968ccN6eac4fbe.jpg" alt=""/>
+					</a>
+					<a href="javascript:;">
+						<img src="./img/5736dbddN662870f6.jpg" alt=""/>
+					</a>
+					<a href="javascript:;">
+						<img src="./img/573289cfN50f3ecf1.jpg" alt=""/>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div id="lazy-clothes" class="lazy-fn floor" data-id="clothes">
+			<div id="clothes">
+				<div class="mt">
+					<h2><i>1F</i>服装鞋包</h2>
+					<ul class="tab">
+						
+						<li class="tab-item tab-selected" ><a href="javascript:void(0)">大牌</a><span></span></li>
+						<li class="tab-item"><a href="javascript:void(0)">男装</a><span></span></li>
+						<li class="tab-item"><a href="javascript:void(0)">女装</a><span></span></li>
+						<li class="tab-item"><a href="javascript:void(0)">鞋靴</a><span></span></li>
+						<li class="tab-item"><a href="javascript:void(0)">箱包</a><span></span></li>
+						<li class="tab-item"><a href="javascript:void(0)">内衣配饰</a><span></span></li>
+						<li class="tab-item"><a href="javascript:void(0)">珠宝首饰</a><span></span></li>
+						<li class="tab-item"><a href="javascript:void(0)">奢品礼品</a><span></span></li>
+						<li class="tab-item"><a href="javascript:void(0)">奢华腕表</a><span></span></li>
+					</ul>
+				</div>
+				<div class="mc">
+					<div class="side">
+						<div class="side-inner">
+							<div class="banner" >
+									<a href="javascript:;" title="" target="_blank">
+										<img src="img/57391a0aN87fe70d2.jpg" width="330" height="475" alt="" >
+									</a>
+							</div>
+							<ul class="themes" >
+								
+								<li class="fore1">
+									<a target="_blank" href="javascript:;">
+										<i class="icon"></i>
+										<span>男装</span>
+									</a>
+								</li>
+								<li class="fore2">
+									<a target="_blank" href="javascript:;">
+										<i class="icon"></i>
+										<span>女装</span>
+									</a>
+								</li>
+								<li class="fore3">
+									<a target="_blank" href="javascript:;">
+										<i class="icon"></i>
+										<span>内衣</span>
+									</a>
+								</li>
+								<li class="fore4">
+									<a target="_blank" href="javascript:;">
+										<i class="icon"></i>
+										<span>鞋靴</span>
+									</a>
+								</li>
+								<li class="fore5">
+									<a target="_blank" href="javascript:;">
+										<i class="icon"></i>
+										<span>箱包</span>
+									</a>
+								</li>
+								<li class="fore6">
+									<a target="_blank" href="javascript:;">
+										<i class="icon"></i>
+										<span>奢侈品</span>
+									</a>
+								</li>
+							</ul>
+							<ul class="words" >
+								<li class="fore1">
+									<a href="javascript:;" target="_blank">
+										<span class="style-red">女装新品</span>
+									</a>
+									<a href="javascript:;" target="_blank">品质男鞋</a>
+									<a href="javascript:;" target="_blank">服装城</a>
+									<a href="javascript:;" target="_blank">太阳镜</a>
+									<a href="javascript:;" target="_blank">时尚女鞋</a>
+									<a href="javascript:;" target="_blank">
+										<span class="style-red">精品男装</span>
+									</a>
+									<a href="javascript:;" target="_blank">纯棉内裤</a>
+									<a href="javascript:;" target="_blank">奢侈品</a>
+								</li>
+								<li class="fore2">
+									<a href="javascript:;" target="_blank">
+										<span class="style-red">水晶手链</span>
+									</a>
+									<a href="//channel.jd.com/womensbag.html" target="_blank">时尚女包</a>
+									<a href="//channel.jd.com/mensbag.html" target="_blank">精品男包</a>
+									<a href="javascript:;" target="_blank">小叶紫檀</a>
+									<a href="javascript:;" target="_blank">
+										<span class="style-red">奢品名表</span>
+									</a><a href="javascript:;" target="_blank">热销腕表</a>
+									<a href="javascript:;" target="_blank">新品首发</a>
+								</li>
+							</ul>
+						</div>
+						<div class="side-extra" >
+							<a href="javascript:;" target="_blank" ><img width="328" height="157" src="img/57389003Nd339b433.jpg"></a>
+						</div>
+					</div>
+					<div class="main">
+						<div class="main-inner">
+							<ul class="main-left fl">
+								<li class="fore1">
+									<a href="javascript:;">
+										<img src="img/573b210eN50f5e0af.jpg" height="157" width="439" alt="">
+									</a>
+								</li>
+								<li class="fore2" >
+									<a href="javascript:;">
+										<img src="img/573b2246N6a8e4cdf.jpg" height="157" width="439" alt="">
+									</a>
+								</li> 
+							</ul>
+							<ul class="main-right fl">
+								<li class="fore1">
+									<a href="javascript:;">
+										<img src="img/573895a8N27af5589.jpg"  alt="">
+									</a>
+								</li>
+								<li class="fore2">
+									<a href="javascript:;">
+										<img src="img/573b29cdNf42ce878.jpg"  alt="">
+									</a>
+								</li>
+								<li class="fore3">
+									<a href="javascript:;">
+										<img src="img/573895beNc6c955f7.jpg"  alt="">
+									</a>
+								</li>
+								<li class="fore4">
+									<a href="javascript:;">
+										<img src="img/573c41c6Nb617c421.jpg"  alt="">
+									</a>
+								</li>
+								<li class="fore5">
+									<a href="javascript:;">
+										<img src="img/573c3d46N8d75c467.jpg"  alt="">
+									</a>
+								</li>
+								<li class="fore6">
+									<a href="javascript:;">
+										<img src="img/573b29cdNf42ce878.jpg"  alt=""  >
+									</a>
+								</li>
+								<li class="fore7">
+									<a href="javascript:;">
+										<img src="img/573895e1Ndd22e36f.jpg"  alt="">
+									</a>
+								</li> 
+								<li class="fore8">
+									<a href="javascript:;">
+										<img src="img/5738957aN3f98d523.jpg"  alt="">
+									</a>
+								</li> 
+							</ul>
+							<div class="slider">
+								<ul class="slider-main">
+									<li>
+										<a target="_blank" href="javascript:;"><img src="./img2/573b24fcNc44261c8.jpg" alt=""/></img></a>
+									</li>
+									<li >
+										<a href="javascript:;"><img src="./img2/57387f86N7b8b496b.jpg" alt=""></img></a>
+									</li>
+									<li>
+										<a href="javascript:;"><img src="./img2/57387faeN36b63d39.jpg" alt=""></img></a>
+									</li>
+									<li>
+										<a href="javascript:;"><img src="./img2/573b2546N339fc3d5.jpg" alt=""></img></a>
+									</li>
+								</ul>
+								<ul class="slider-nav">
+									<li>1</li>
+									<li>2</li>
+									<li>3</li>
+									<li>4</li>
+								</ul>
+								<div class="slider-page">
+									<a class="slider-prev" href="javascript:;"><</a>
+									<a class="slider-next" href="javascript:;">></a>
+								</div>					
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

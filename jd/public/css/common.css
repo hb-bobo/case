@@ -1,0 +1,73 @@
+
+/* a标签 */
+.style-red {color: rgb(200, 22, 35);}
+.a_red:link{color: red;}
+/* 浮动清浮动 */
+.clr {display: block; overflow: hidden;clear: both;height: 0;line-height: 0;font-size: 0;}
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+.clearfix{*zoom:1;}
+.hc{margin: 0 auto;}
+.fl{float: left}
+.fr{float:right}
+.clear{clear:both;}
+/* 鼠标 */
+.mouse_d{cursor:default;}
+.mouse_p{cursor:pointer;}
+.root .hc{width: 1210px;}
+/* 调试 */
+.bd-r{border:1px solid red;}
+.bg-r{background: red;}
+/* ------------------------------------------ */
+.dorpdown_layer{ display: none; position: absolute;}
+.dropdown{position: relative;z-index: 20;}
+.icon{height: 7px;overflow: hidden;}
+
+#guessyou .mt, #share .mt, #special .mt, #special-buy .mt, .floor .mt {
+height: 36px;
+}
+.m, .mb, .mc, .mt, .p-detail, .p-img, .p-market, .p-name, .p-price, .sm, .smb, .smc, .smt {
+overflow: hidden;
+}
+/* 懒加载 */
+.lazy-fn{background: url("../images/loading.gif") no-repeat center center;}
+.root .lazy-fn-done{background:0 0;}
+/* 栏目标题 */
+#guessyou .mt .extra, #guessyou .mt .tab, #share .mt .extra, #share .mt .tab, #special .mt .extra, #special .mt .tab, #special-buy .mt .extra, #special-buy .mt .tab, .floor .mt .extra, .floor .mt .tab {
+	float: right;
+	display: inline;
+}
+#guessyou h2, #share h2, #special h2, #special-buy h2, .floor h2 {
+	float: left;
+	display: inline;
+	line-height: 30px;
+	font-size: 20px;
+}
+.slider-main{
+position: absolute;
+left: 0px;
+}
+/* 左右按钮 */
+.slider-page{
+	position: absolute;
+	top:50%;
+	width: 100%;
+	display: none;
+}
+.slider-page a {
+    margin-top: -31px;
+    z-index: 1;
+    display: block;
+    width: 28px;
+    height: 62px;
+    line-height: 62px;
+    background: gray;
+    background: rgba(0,0,0,.2);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#32000000, endColorstr=#32000000);
+    color: #fff;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+    font-family: simsun;
+}
+.slider-prev{float: left;}
+.slider-next{float: right;}
