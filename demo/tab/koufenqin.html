@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>口风琴效果</title>
+<style type="text/css">
+
+*{margin:0px;padding:0px;}
+#wrap{height: 250px;width: 700px;margin-left:100px;padding: 20px;border-top:5px solid#000;}
+ul{list-style:none;}
+li{float:left;border-left:1px outset #ccc;border-right:1px outset #ccc;
+   text-align:center;position: relative;}
+
+img{width:40px;height:40px;border:1px solid #ccc;border-radius:45px;position: absolute;left: 4px;top:0px;}
+img.active2{border:2px solid #d86f2a;} 
+ul li div{width: 248px;height:225px;display: none;border-left:2px outset #d86f2a;border-right:2px outset #d86f2a;}
+ul li div.cur1{display: inline-block;}
+
+a{margin-top:45px;float:left;display: inline-block;text-decoration:none;width:50px;height:180px;color:#777;font:2em bolder '¿¬Ìå','Microsoft YaHei'; }
+ul li a.active{color: #d86f2a;}
+/* span{padding: 5px;} */
+</style>
+<script type="text/javascript">
+
+window.onload=function(){
+	var oWrap=document.getElementById('wrap');
+	var aLi=oWrap.getElementsByTagName('li');
+	var aImg=oWrap.getElementsByTagName('img');
+	var aDiv=oWrap.getElementsByTagName('div');
+	var aA=oWrap.getElementsByTagName('a');
+	
+	for(var i=0;i<aLi.length;i++){
+		(function(index){
+			aLi[i].onmouseover=function(){
+				for(var i=0;i<aLi.length;i++){
+
+		            aA[i].className='';
+		            aDiv[i].className='';
+		            aImg[i].className='';
+	            }
+		            aA[index].className='active';
+		            aImg[index].className='active2';
+		            aDiv[index].style.background='url(images/'+index+'.png)';
+		            aDiv[index].className='cur1';
+
+		    }
+		    
+		    
+
+	})(i);
+		
+	}
+	
+}
+</script>
+</head>
+
+<body>
+	<div id="wrap">
+		<ul>
+			<li ><img src="images/1_1.png" >
+				 <a  href="javascrip:;">末日使者</a>
+				<div ></div>
+			</li>
+			
+			<li >
+				<img src="images/1_2.png" >
+				 <a href="javascrip:;">不祥之刃</a>
+				<div ></div>
+			</li>
+			
+			<li>
+				<img src="images/1_3.png" >
+				 <a href="javascrip:;">寡妇制造</a>
+				<div ></div>
+			</li>
+			
+			<li>
+				<img src="images/1_4.png" >
+				 <a href="javascrip:;">沙漠死神</a>
+				<div></div>
+			</li>
+			
+			
+			<li>
+				<img src="images/1_5.png" >
+				 <a href="javascrip:;">宝石骑士</a>
+				<div ></div>
+			</li>
+			
+			<li>
+				<img src="images/1_6.png" >
+				 <a href="javascrip:;">麦林炮手</a>
+				<div ></div>
+			</li>
+			
+			<li>
+				<img src="images/1_7.png" >
+				 <a href="javascrip:;">披甲龙龟</a>
+				<div ></div>
+			</li>
+			
+			<li >
+				<img src="images/1_8.png" >
+				 <a href="javascrip:;">恶魔小丑</a>
+				<div ></div>
+			</li>
+
+		</ul>
+		
+	</div>
+</body>
+</html>

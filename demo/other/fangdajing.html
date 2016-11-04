@@ -1,0 +1,68 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>测试</title>
+	<style type="text/css">/* 
+	div{width: 1000px;height: 60px;} */
+    #div1{width: 300px;height:300px;position: relative; }
+    #div1 img{width: 300px;height:300px;}
+    #mark{width: 80px;height: 80px;position: absolute;left: 0;top: 0;opacity: 0.5;background: #000;display: none;filter:opacity(100);}
+    #div2{width: 300px;height: 300px;position: relative;left: 400px;top:-300px;border:2px solid red;overflow:hidden; display: none}
+    #div2 img{position: absolute;left: 0;top: 0;}
+	</style>
+	<script type="text/javascript">
+window.onload=function(){
+    var oDiv1=document.getElementById('div1');
+    var oDiv2=document.getElementById('div2');
+    var oMark=document.getElementById('mark');
+    var oMimg=document.getElementById('m');
+    var oGbimg=document.getElementById('bg');
+    oDiv1.onmousemove=function(ev){
+    	oMark.style.display="block";
+    	oDiv2.style.display="block";
+    	var oEvet=event||ev;
+    	var t=oEvet.clientY-oMark.offsetHeight/2;
+    	var l=oEvet.clientX-oMark.offsetWidth/2;
+    	//限定
+        if(l<0) l=0;
+        if(l>oDiv1.offsetWidth-oMark.offsetWidth) l=oDiv1.offsetWidth-oMark.offsetWidth;
+        if(t<0) t=0;
+        if(t>oDiv1.offsetHeight-oMark.offsetHeight) t=oDiv1.offsetHeight-oMark.offsetHeight;
+        oMark.style.left=l+"px";
+        oMark.style.top=t+"px";
+        //移动比例
+        oGbimg.style.left=oMark.offsetLeft/(oDiv1.offsetWidth-oMark.offsetWidth)*(oDiv2.offsetWidth-oGbimg.offsetWidth)+"px";
+        oGbimg.style.top=oMark.offsetTop/(oDiv1.offsetHeight-oMark.offsetHeight)*(oDiv2.offsetHeight-oGbimg.offsetHeight)+"px";
+
+    }
+    oDiv1.onmouseout=function(){
+    	oMark.style.display="none";
+    	oDiv2.style.display="none";
+    }
+
+}
+</script>
+</head>
+
+<body>
+<div id="div1">
+	<img src="images/1.jpg" id="m">
+	<div id="mark"></div>
+</div>
+<div id="div2">
+	<img src="images/1.jpg" id="bg">
+</div>
+
+<!-- <div id="div1" ></div>
+   
+   
+    	<div id="div1" 
+    	class="box"></div>
+    	<div id="div3"></div>
+    	<div id="div2" class="l box"></div>
+    	<div id="div3"></div>
+    	<div id="div4"></div>   -->
+    
+</body>
+</html>

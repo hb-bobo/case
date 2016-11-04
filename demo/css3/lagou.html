@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+ul{list-style: none;padding: 0;margin-left: 200px ;margin-top:100px;}
+li{float: left;margin-left:5px;padding:0;position: relative;background:#FD0DA9;overflow: hidden;}
+li a{display: block;}
+li div{margin:0;padding:0;background: #000;position: absolute;width: 150px;height: 150px;opacity:0.5;left:0;top:100%;
+	}
+li:hover div{top:0;left:0;}
+li img{width:150px;height: 150px;display: block;}	
+</style>
+<script>
+window.onload=function(){
+	var aLi=document.getElementsByTagName('li');
+	var aA=document.getElementsByTagName("a");
+	var arr=[];
+	var t=aLi[0].offsetTop;
+	var b=aLi[0].offsetTop+aLi[0].offsetHeight;
+	for(var i=0,len=aLi.length;i<len;i++){
+		arr.push({
+			"obj":aLi[i].getElementsByTagName("div")[0],
+			"l":aLi[i].offsetLeft,
+			"t":t,
+			"r":aLi[i].offsetLeft+aLi[i].offsetWidth,
+			"b":b
+		})
+		aLi[i].onmouseout=function(ev){
+			var oEvt=ev||event;
+			var x=oEvt.clientX;
+			var y=oEvt.clientY;
+			arr[0].obj.style.transition="300ms all ease";
+			move(x,y);
+		}
+	}
+	var ok=true;
+	console.log(arr)
+	document.onmousemove=function(ev){
+		var oEvt=ev||event;
+		var x=oEvt.clientX;
+		var y=oEvt.clientY;
+		/*var x=oEvt.pageX;
+		var y=oEvt.pageXY;*/
+		for(var i=0;i<aLi.length;i++){
+			(function(index){
+				aA[i].onmousemove=function(){		
+					arr[index].obj.style.transition="300ms all ease";
+					arr[index].obj.style.left=0;
+					arr[index].obj.style.top=0;
+
+				}
+			})(i)
+			
+		}
+		move(x,y);
+		
+	}
+	
+	function move(x,y){
+		for(var i=0,len=arr.length;i<len;i++){
+				if(arr[i].l>x && arr[i].r>x){
+					
+					arr[i].obj.style.left="-100%";//左
+					arr[i].obj.style.top="0";
+					
+				}else if(arr[i].l<x &&arr[i].r<x){
+					arr[i].obj.style.left="100%";//右
+					arr[i].obj.style.top="0";
+					//arr[i].obj.style.transition="";
+
+				}else if(arr[i].t>y&& arr[i].b>y){
+					arr[i].obj.style.top="-100%";//上
+					arr[i].obj.style.left="0";
+					//arr[i].obj.style.transition="";
+				}else if(arr[i].b<y&& arr[i].t<y ){
+					arr[i].obj.style.top="100%";//下
+					arr[i].obj.style.left="0";
+					//arr[i].obj.style.transition="";
+				}
+		}
+	}
+
+}	
+</script>	
+</head>
+<body>
+	<ul>
+		<li>
+			<a href="">
+				<img src="" alt="">
+				<div></div>
+			</a>
+		</li>
+		<li>
+			<a href="">
+				<img src="" alt="">
+				<div></div>
+			</a>
+		</li>
+		<li>
+			<a href="">
+				<img src="" alt="">
+				<div></div>
+			</a>
+		</li>
+		<li>
+			<a href="">
+				<img src="" alt="">
+				<div></div>
+			</a>
+		</li>
+		<li>
+			<a href="">
+				<img src="" alt="">
+				<div></div>
+			</a>
+		</li>
+		<li>
+			<a href="">
+				<img src="" alt="">
+				<div></div>
+			</a>
+		</li>
+	</ul>
+</body>
+</html>

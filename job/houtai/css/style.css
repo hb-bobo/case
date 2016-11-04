@@ -1,0 +1,119 @@
+@charset "utf-8";
+*{margin: 0;padding: 0;}
+html,body{font:normal 14px "方正黑体简体","微软雅黑",arial;}
+ul,li{margin: 0;padding: 0;}
+ul{list-style: none;}
+a,a:hover{text-decoration: none;}
+.clear{clear: both;width: 0;overflow: hidden;}
+.hides{display: none;}
+input[type="button"],input[type="submit"],textarea,select{
+	-webkit-appearance: none;
+}
+img,input,textarea,select{border: none;outline: none;}
+input,textarea,select{font-family:"方正黑体简体","微软雅黑",arial;}
+textarea{resize: none;}
+/*头部*/
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus{background-color: #0F458D;}
+.top{width: 100%;background: #1C549F;color: #fff;font-size: 16px;position: fixed;top: 0;right: 0;left: 0;z-index: 2;}
+.quit{position: absolute;right: 0px;top: 0;padding: 12px 15px 10px 10px;display: block;}
+.quit img{width: 24px;display: block;}
+.top .navbar-header .navbar-toggle{
+position: relative;
+float: left;
+margin-left: 15px;
+padding: 9px 10px;
+margin-top: 8px;
+margin-bottom: 8px;
+background-color: transparent;
+background-image: none;
+border: 1px solid transparent;
+border-radius: 4px;
+}
+.navbar-inverse .navbar-nav>li>a{color: #fff;}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus{background-color: #0f458d}
+
+/*分页效果*/
+.pagination{margin:5px 0;}
+/*搜索框*/
+.select-div{
+	width: 90%;
+	margin: 10px auto;
+	}
+.select-div .select-span{
+	display: inline-block;
+	background:#fff url(../img/search.png) no-repeat center;
+	border: 1px solid #d9d9d9;
+	border-radius: 4px;
+	padding: 20px;
+	margin-left:1px;
+	vertical-align: middle;
+	}
+.select-div input[type=text]{
+	width: 70%;padding: 10px 0;
+	font-size: 16px;text-align: center;border: 1px solid #d9d9d9;
+	border-radius: 4px;vertical-align: middle;
+	}	
+/*主体内容*/
+.module-title{
+	line-height:35px;position: relative;padding: 10px 15px;font-size: 18px;text-align: left;width: 100%;
+	border-bottom: 1px solid #d9d9d9;
+	background: #fff;
+	}
+.add{position: absolute;right: 15px;display: inline-block;margin-left:15px;}
+/*.add-icon{background: #fff;color: #428bca;font-size:20px;line-height:16px;font-weight: bolder;border-radius: 50%;width: 20px;height: 20px;display: inline-block;}*/
+.module ul.uls>li {
+	width: 95%;
+	margin: 0 auto 10px;
+	background: #fff;
+	border: 1px solid #d9d9d9;
+	border-radius: 4px;
+}
+
+.module ul.uls>li>a {
+	display: block;
+	padding: 10px;
+	width: 90%;margin: 0 auto;
+	
+}
+.module ul.uls>li table {
+	text-align: left;
+	width: 100%;
+	color: #333;
+	font-size: 16px;
+	background: #fff;
+	background-size: 12px;
+}
+.module ul.uls>li table tr td:nth-of-type(1){width:5.5em;}
+.module ul.uls>li table tr td{padding:3px 0;}
+.module ul.uls>li ul li{float: left;text-align: left;width:48%;color: #333;}
+.module ul.uls>li ul li:first-child{width:4em;margin-right: 5px;}
+.module ul.uls>li ul li label{font-weight:normal;color:#808080;display: block;white-space: nowrap;overflow: hidden; text-overflow:ellipsis;}
+.module ul.uls>li ul li span{display: block;white-space: nowrap;overflow: hidden; text-overflow:ellipsis;}
+.module ul.uls table label {
+	font-weight: normal;
+	color: #808080;
+	margin: 0;
+	white-space: nowrap;
+}
+.module ul.uls table .padlr{padding: 0 20px 0 5px;}
+.module ul.uls>li .enrollstate{line-height:1.5em;border-top: 1px solid #d9d9d9;padding:10px 0;font-size: 16px;width: 90%;margin: 0 auto;}
+.module ul.uls>li .enrollstate .enrollstate-btn{float: right;}
+.module ul.uls>li .enrollstate .enrollstate-btn>a:visited{text-decoration: none;}
+.module ul.uls>li .enrollstate .enrollstate-btn>a{
+	margin-right:10px;
+	}
+/*模态框*/
+.modal-body{text-align: center;}
+.modal-body>a{display: inline-block;width: 90%;color: #428bca;}
+.modal-body>a>label{width:6em;display: inline-block;padding:20px 0 10px;text-align: right;padding-right: 10px;box-sizing: border-box;}
+.modal-body>a>span{text-align: left;width: 60%;display: inline-block;padding:20px 0 10px;border-bottom: 1px solid #ccc;padding-left: 5px;}
+.modal-body>a>span.no-border{border: none;}
+.modal-body>a>span>select{color: #a9a9a9;}
+.modal-body>a>span>input{padding-left: 5px;box-sizing: border-box;width: 100%;}
+.modal-body>a>span>input,.modal-body>a>span>select{
+	text-align: left;
+	font-size: 16px ;
+	}
+.modal-body>a>span>select.using{color: #428bca;}
+/*模态框2*/
+.modal-body .sure{font-size: 16px;color: #D2322D;}

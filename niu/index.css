@@ -1,0 +1,59 @@
+﻿/* 初始化 */
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,input,button,form,fieldset,img{
+	padding:0px;margin:0px;
+}
+/*Unicode编码(宋体:\5B8B\4F53) */
+body{background:#fff;font:12px/150% Arial,Verdana,"\5b8b\4f53";color: #666;background: #fff;}
+/* 清除列表样式 */
+ol,ul {list-style: none;}
+/* 链接样式*/
+a {text-decoration:none;}
+a:link {color:#666;}
+a:visited{color:#800080;}
+a:hover,a:active,a:focus{color:#C00C00; text-decoration:none;}
+/* 常用样式 */
+
+img{border:0;vertical-align: middle;}
+h2,h3{font-family: "microsoft yahei";font-weight: 400;}
+em, i, u {font-style: normal;}
+/* -------------------- */
+
+/* a标签 */
+.style-red {color: rgb(200, 22, 35);}
+.a_red:link{color: red;}
+/* 浮动清浮动 */
+.clr {display: block; overflow: hidden;clear: both;height: 0;line-height: 0;font-size: 0;}
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+.clearfix{*zoom:1;}
+.hc{margin: 0 auto;}
+.fl{float: left}
+.fr{float:right}
+.clear{clear:both;}
+/* 鼠标 */
+.mouse_d{cursor:default;}
+.mouse_p{cursor:pointer;}
+.root .hc{width: 1210px;}
+/* --------------------------------- */
+body{background: rgb(224, 244, 255) url(img/bg.jpg) no-repeat center top;background-size: 100% auto;position: relative;}
+#head,content,.floor{width: 100%}
+.hc{width:960px;margin:0 auto;}
+#head{height: 420px;background: url(img/head-bg.png)repeat-y;overflow: hidden;}
+#nav{position:relative;width:992px;height:111px;background: url(img/nav-bg.png) no-repeat;margin:0 auto;margin-top:150px;}
+#nav ul{position: absolute;left:20px;top:50%;margin-top: -25px;}
+#nav ul li{float: left;margin-right: 15px;}
+#nav ul li a{display: inline-block;width: 80px;height: 30px;font-size:18px;line-height:30px;text-align: center; border:1px solid #fff;border-radius:30px;}
+#content{height: 1300px;}
+.floor{height: 300px;background: url(img/floor.png) ;position: absolute;bottom:0px;left: 0px;}
+.show{height:500px;}
+.odd .show-left{float: left;width: 300px;height:500px;position: relative;}
+.odd .show-left:hover .odd .show-z .pt-z{left:131px;}			
+.odd .show-right{float: left;width:656px;height:450px;border-radius:10px;box-shadow:2px 2px;border:1px solid #fff;}
+.odd .show-z .one{position: absolute;left:0;top:0;z-index: 1;}
+.odd .show-z .two{position: absolute;left:0;top:0;z-index: 0;
+					-transition: 1s all ease}
+.even .show-left{float: left;width: 656px;height:450px;border-radius:10px;box-shadow:2px 2px;border:1px solid #fff;}
+.even .show-right:hover .even .show-z .pt-z{right:131px;}			
+.even .show-right{float: left;width: 300px;height:500px;position: relative;}
+.even .show-z .one{position: absolute;right:0;top:0;z-index: 1;}
+.even .show-z .two{position: absolute;right:3px;top:0;z-index: 0;
+					-transition: 1s all ease}

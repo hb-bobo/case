@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+body{background: #000}	
+</style>
+<script>
+window.onload=function(){
+	var oCnv=document.getElementById("can");
+	var gd=oCnv.getContext("2d");
+	var winX=window.innerWidth;
+	var winY=window.innerHeight;
+	oCnv.width=winX;
+	oCnv.height=winY;
+	
+	var arrCoor=[];
+	var arrOld=[];
+	var num=5;
+	for(var i=0;i<num;i++){//生产并存坐标速度
+		arrCoor.push(
+		{
+			x:random(0,winX),
+			y:random(0,winY),
+			W:5,
+			H:5,
+			speedX:random(-10,10),
+			speedY:random(-10,10)
+		})
+	}
+	setInterval(function(){
+		var arr=[];
+		gd.clearRect(0,0,winX,winY);//抗锯齿
+
+		gd.beginPath();
+		gd.moveTo(arrCoor[0].x,arrCoor[0].y);
+		for(var i=1;i<num;i++){
+			gd.lineTo(arrCoor[i].x,arrCoor[i].y)			
+		}
+		gd.closePath();
+		gd.strokeStyle="#2DF42D";
+		gd.stroke();
+		
+		for(var i=0;i<arrCoor.length;i++){
+			//drawPoint(arrCoor[i])
+			arrCoor[i].x+=arrCoor[i].speedX;
+			arrCoor[i].y+=arrCoor[i].speedY;
+			if(arrCoor[i].x<0 ||arrCoor[i].x>winX){//碰到坐标或右边速度取反
+				arrCoor[i].speedX*=-1;
+			}else if(arrCoor[i].y<0 ||arrCoor[i].y>winY){
+				arrCoor[i].speedY*=-1;
+			}
+			arr.push({//把5个点的坐标存起来
+				x:arrCoor[i].x,
+				y:arrCoor[i].y,
+			})
+		}
+		arrOld.push(arr);//每画一次存一次
+		while(arrOld.length>25){
+			arrOld.shift();
+		}
+		for(var i=0;i<arrOld.length;i++){
+			gd.beginPath();
+			gd.moveTo(arrOld[i][0].x,arrOld[i][0].y);
+			for(var j=0;j<arrOld[i].length;j++){
+				gd.lineTo(arrOld[i][j].x,arrOld[i][j].y);
+			}
+
+			gd.closePath();
+			gd.strokeStyle="rgba(36,194,36,"+(i/arrOld.length)+")";
+			//gd.strokeStyle="#2DF42D";
+			gd.stroke();
+		}
+		
+	},16)
+
+	function drawPoint(p){//画点（小矩形）
+		gd.fillStyle="#fff";
+		gd.fillRect(p.x,p.y,p.W,p.H);
+		gd.strokeRect(p.x,p.y,p.W,p.H);
+	}
+	function random(n,m){
+		return Math.floor(n+Math.random()*(m-n));
+	}
+}	
+</script>	
+</head>
+
+<body>
+	<canvas id="can"></canvas>
+</body>
+</html>

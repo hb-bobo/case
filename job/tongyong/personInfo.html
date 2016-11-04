@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no,email=no" />
+    <title>联系人信息</title>
+    <link rel="stylesheet" type="text/css" href="css/base.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/rem.js"></script>  
+<style>
+    html{font-size: 100px;background: #eaeaea;}
+    body{font-size: .18rem;}
+    .w{padding:0 .37rem;}
+    #next{margin-top:1rem;margin-bottom: 1rem }
+</style>    
+</head>
+<body>
+    <div class="wrap">
+        <div class="form">
+            <form action="javascript:;" id="oForm">
+                <div id="person-info">
+                    <div class="form-group">
+                        <div class="form-item w">
+                            <i class="iconfont icon-yonghu"></i>
+                            <input id="ownerName" class="mustInput" type="text" placeholder="请输入车主姓名(必填)"/>
+								<div class="input-remind">
+									<span>此项不能为空</span>
+								</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-item w sex">
+                            <i class="iconfont icon-sex"></i>
+                            <input id="sex" class="mustInput" type="text" placeholder="请选择性别(必选)" readonly="readonly"/>
+								
+                            <i class="iconfont icon-xia"></i>
+                            <div class="input-remind">
+                                    <span>此项不能为空</span>
+                            </div>
+                        </div>
+                        <!-- 弹出 -->
+                        <div class="sex-modal modal">
+                             <div class="modal-content">
+                                 <div class="modal-head w">
+                                     <h2 class="text-center">请选择性别</h2>
+                                 </div>
+                                 <div class="modal-body w">
+                                     <div class="radio-box flex-container">
+                                         <div class="f1">                                                  
+                                            <input id="man" type="radio" name="sex" value="yes">
+                                            <label for="man" class="text-center" date-value="男">
+                                                <i class="iconfont icon-yandou"></i> 
+                                            男</label>
+                                         </div>
+                                         <div class="f1">
+                                            <input id="lady" type="radio" name="sex" value="no">
+                                            <label for="lady" class="text-center" date-value="女">
+                                                <i class="iconfont icon-nvxieb"></i> 
+                                            女</label>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div class="modal-footer"></div>
+                             </div>   
+                        </div>
+                        <!-- 弹出 -->
+                    </div>
+                    <div class="form-group">
+                        <div class="form-item w">
+                            <i class="iconfont icon-lianxirenfill"></i>
+                            <input id="contactPerson" class="mustInput" type="text" placeholder="请输入联系人(必填)"/>
+								<div class="input-remind">
+									<span>此项不能为空</span>
+								</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-item w">
+                            <i class="iconfont icon-dianhua"></i>
+                            <input id="phone" class="mustInput" type="text" placeholder="请填写手机号码(重要)"/>
+								<div class="input-remind">
+									<span>此项不能为空</span>
+								</div>
+                        </div>
+                        <div class="form-explain">
+                            <p>为了便于联系，请填写有效手机号</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="person-address">
+                    <div class="form-group">
+                        <div class="form-item w">
+                            <i class="iconfont icon-didian"></i>
+                            <input id="province" class="mustInput" type="text" placeholder="请选择所在省份(必选)"/>
+								
+                            <i class="iconfont icon-xia"></i>
+                            <div class="input-remind">
+                                    <span>此项不能为空</span>
+                            </div>
+                        </div>
+                        <!-- 弹出 -->
+                        <div id="modal" class="address-modal modal">
+                             <div class="modal-content">
+                                 <div class="modal-head w">
+                                     <h2 class="text-center">请选择省份</h2>
+                                 </div>
+                                 <div class="modal-body w">
+                                     <ul  class="modal-option">
+                                                                             
+                                     </ul>
+                                 </div>
+                                 <div class="modal-footer"></div>
+                             </div>
+                        </div>
+                        <!-- 弹出 -->
+                    </div>
+                    <div class="form-group">
+                        <div class="form-item w">
+                            <i class="iconfont icon-location-o"></i>
+                            <input id="twon" class="mustInput" class="" type="text" placeholder="选择所在市(必选)"/>
+								
+                            <i class="iconfont icon-xia"></i>
+                            <div class="input-remind">
+                                    <span>此项不能为空</span>
+                            </div>
+                        </div>
+                        <!-- 弹出 -->
+                        <div id="modal2" class="address-modal modal">
+                             <div class="modal-content">
+                                 <div class="modal-head w">
+                                     <h2 class="text-center">请选择市</h2>
+                                 </div>
+                                 <div class="modal-body w">
+                                     <ul  class="modal-option">
+                                                                           
+                                     </ul>
+                                 </div>
+                                 <div class="modal-footer"></div>
+                             </div>
+                        </div>
+                        <!-- 弹出 -->
+                    </div>
+                    <div class="form-group">
+                        <div class="form-item w">
+                            <i class="iconfont icon-svg18"></i>
+                            <input id="county" class="mustInput" type="text" placeholder="选择所在县(必选)"/>
+								
+                            <i class="iconfont icon-xia"></i>
+                            <div class="input-remind">
+                                    <span>此项不能为空</span>
+                            </div>
+                        </div>
+                        <!-- 弹出 -->
+                        <div id="modal3" class="address-modal modal">
+                             <div class="modal-content">
+                                 <div class="modal-head w">
+                                     <h2 class="text-center">请选择区</h2>
+                                 </div>
+                                 <div class="modal-body w">
+                                     <ul  class="modal-option">                               
+                                     </ul>
+                                 </div>
+                                 <div class="modal-footer"></div>
+                             </div>
+                        </div>
+                        <!-- 弹出 -->
+                    </div>
+                    <div class="form-group">
+                        <div class="form-item w">
+                            <i class="iconfont icon-4sdianicon"></i>
+                            <input id="shopPlace" class="mustInput" type="text" placeholder="请选择希望维修的4S店(必选)"/>
+                            <i class="iconfont icon-xia"></i>
+                            <div class="input-remind">
+                                    <span>此项不能为空</span>
+                            </div>
+                        </div>
+                        <!-- 弹出 -->
+                        <div id="modal4" class="address-modal modal">
+                             <div class="modal-content">
+                                 <div class="modal-head w">
+                                     <h2 class="text-center">请选择4s店</h2>
+                                 </div>
+                                 <div class="modal-body w">
+                                     <ul  class="modal-option">
+                                         <li >xx路4s店</li> 
+                                         <li >xx路4s店</li>                                    
+                                     </ul>
+                                 </div>
+                                 <div class="modal-footer"></div>
+                             </div>
+                        </div>
+                        <!-- 弹出 -->
+                    </div>
+                </div>
+                
+                <div id="next" class="text-center">
+                    <input type="submit" class="btn btn-next" value="提交" />                   
+                    <a href="javascript:;" class="btn btn-prev">上一步</a>
+                </div>
+            </form>
+        </div>
+    </div>  
+    <script src="js/index.js"></script> 
+    <script src="js/city.js"></script>
+    <script>
+
+        !function($,window){
+            var oForm=document.getElementById("oForm")
+                addressModal=document.querySelector(".modal"),
+                phone=document.getElementById("phone"),
+                $province=$("#province"),
+                $twon=$("#twon"),
+                $county=$("#county"),
+                $shopPlace=$("#shopPlace"),
+                $sex=$("#sex");
+
+            /*手机号号过滤*/
+            var phoneReg=/^[1][0-9]{10}$/g;
+            phone.oninput=function(ev){          
+                if(!phoneReg.test(this.value) && this.value!=""){
+                    forbidBox.call(this,"show");
+                }else{
+                    forbidBox.call(this,"no");
+                }
+
+            }
+            phone.onkeypress=function(ev){
+                /*禁止输入后可以通过左右键del键*/            
+                if(phone.value.length>10) {                            
+                    return false;
+                };
+                
+                
+            }
+            var reg=/(37|38|39|40|8)/g;
+            phone.onkeyup=function(ev){
+                if(!reg.test(ev.keyCode)){
+                    ev.preventDefault();
+                    return false;
+                }
+            } 
+            /*性别*/
+            $sex.next().click(function(){
+                var _this=this;
+                var $model=$(this).parent().next();
+                new modal($model.get(0)).show();
+                $model.find("label").on("touchstart",function(){
+                    $model.find(".iconfont").removeClass("act");
+                    $(this).children().addClass("act");
+                    $(_this).prev().val($(this).attr("date-value"));
+                    $model.hide();
+                })
+                return false;
+            })
+
+            /*地址联动*/
+            var provinceData=[],twonData=[],countyData=[],shopPlaceData=[],
+                provinceCode=null,twonCode=null,countyCode=null;
+            provinceData=[{name:"北京",code:"0"},{name:"上海",code:"1"},{name:"广东",code:"2"}];
+            twonData=[  
+                        {name:"北京",code:"0",parentCode:"0"},
+                        {name:"广州",code:"2",parentCode:"2"},
+                        {name:"深圳",code:"3",parentCode:"2"},
+                        {name:"上海",code:"1",parentCode:"1"}
+
+                     ];
+
+            countyData=[ 
+                        {name:"东城区",code:"0",parentCode:"0"},
+                        {name:"朝阳区",code:"1",parentCode:"0"},
+                        {name:"番禺区",code:"2",parentCode:"2"},
+                        {name:"市桥区",code:"3",parentCode:"2"},
+                        {name:"徐汇区",code:"4",parentCode:"1"},
+                        {name:"静安区",code:"5",parentCode:"1"},
+                        {name:"罗湖区",code:"6",parentCode:"3"},
+                        {name:"龙岗区",code:"7",parentCode:"3"}
+                     ];
+            shopPlaceData=[
+                        {name:"龙华路xx店",code:"0",parentCode:"4"},
+                        {name:"石龙路xx店",code:"1",parentCode:"4"},
+                        {name:"安西路xx店",code:"2",parentCode:"5"},
+                        {name:"xx路4s店",code:"3",parentCode:"0"},
+                        {name:"xx路4s店",code:"4",parentCode:"0"},
+                        {name:"xx路4s店",code:"5",parentCode:"0"},
+                        {name:"xx番禺路4s店",code:"6",parentCode:"2"},
+                        {name:"xx番禺路4s店",code:"7",parentCode:"2"}
+                    ]
+            var checkClass=new modal(addressModal);//弹出框
+
+            /*地址下拉*/
+
+            //省份下拉
+            $province.next().click(function(ev){
+            	var _this=ev.target;//_this.parentNode.nextElementSibling为弹窗口
+            	var modelCopy=_this.parentNode.nextElementSibling;
+            	new slideModal(modelCopy).show();//列表拖拉/显示
+	            var listHTML="";
+                if(provinceData!=""){
+                    for(var i=0;i<provinceData.length;i++){
+                        listHTML+='<li data-code="'+provinceData[i].code+'">'+provinceData[i].name+'</li>';
+                    }
+                }
+	            $(modelCopy).find(".modal-option").html(listHTML);
+                var $aLi=$(modelCopy).find("li");
+                $aLi.tap(function(){
+                    if($(this).attr("data-code")!=provinceCode){
+                        $twon.val("");
+                        $county.val("");
+                        $shopPlace.val("");
+                    }
+                    provinceCode=$(this).attr("data-code");
+                	_this.previousElementSibling.value=this.innerHTML;
+                    modelCopy.style.display="none"; 
+                    //清空后面的值
+                    twonCode=null,countyCode=null;
+                    
+                });  
+            })
+            //市下拉
+            $twon.next().click(function(ev){
+            	var _this=ev.target;//_this.parentNode.nextElementSibling为弹窗口
+            	var modelCopy=_this.parentNode.nextElementSibling;
+            	new slideModal(modelCopy).show();//列表拖拉/显示
+
+                var cityR=city2({
+                    cityData:twonData,
+                    parentCode:provinceCode
+                })
+	            var listHTML="";
+	            for(var i=0;i<cityR.length;i++){
+                    listHTML+='<li data-code="'+cityR[i].code+'">'+cityR[i].name+'</li>';
+	            }
+	            $(modelCopy).find(".modal-option").html(listHTML);
+                var $aLi=$(modelCopy).find("li");
+                $aLi.tap(function(){
+                    if($(this).attr("data-code")!=provinceCode){
+                        $county.val("");
+                        $shopPlace.val("");
+                    }
+                    twonCode=$(this).attr("data-code");
+                	_this.previousElementSibling.value=this.innerHTML;
+                    modelCopy.style.display="none"; 
+                    countyCode=null;
+                    
+                });  
+            })
+            //区下拉
+            $county.next().click(function(ev){
+            	var _this=ev.target;//_this.parentNode.nextElementSibling为弹窗口
+            	var modelCopy=_this.parentNode.nextElementSibling;
+            	new slideModal(modelCopy).show();//列表拖拉/显示
+                var cityR=city2({
+                    cityData:countyData,
+                    parentCode:twonCode
+                })
+	            var listHTML="";
+	            for(var i=0;i<cityR.length;i++){
+                    listHTML+='<li data-code="'+cityR[i].code+'">'+cityR[i].name+'</li>';
+                }
+	            $(modelCopy).find(".modal-option").html(listHTML);
+
+                var $aLi=$(modelCopy).find("li");
+                $aLi.tap(function(){
+                    if($(this).attr("data-code")!=provinceCode){
+                        $shopPlace.val("");
+                    }
+                	countyCode=$(this).attr("data-code");
+                	_this.previousElementSibling.value=this.innerHTML;
+                    modelCopy.style.display="none";
+                });  
+            })
+            //店下拉
+            $shopPlace.next().click(function(ev){
+            	var _this=ev.target;//_this.parentNode.nextElementSibling为弹窗口
+            	var modelCopy=_this.parentNode.nextElementSibling;
+            	new slideModal(modelCopy).show();//列表拖拉/显示
+                var cityR=city2({
+                    cityData:shopPlaceData,
+                    parentCode:countyCode
+                })
+	            var listHTML="";
+	            for(var i=0;i<cityR.length;i++){
+                    listHTML+='<li data-code="'+cityR[i].code+'">'+cityR[i].name+'</li>';
+                }
+	            $(modelCopy).find(".modal-option").html(listHTML);
+
+                var $aLi=$(modelCopy).find("li");
+                $aLi.tap(function(){
+                	_this.previousElementSibling.value=this.innerHTML;
+                    modelCopy.style.display="none"; 
+                });  
+            })
+            
+            
+            /*提交验证*/
+            var $mustInput=$(".mustInput");
+            $mustInput.blur(function(){
+                if(this.id=="sex"){
+                    return false;
+                }
+                if(this.value==""){
+                    forbidBox.call(this,"show");                   
+                }else{
+                    if(this.id=="phone"){
+                        if(this.value.length!==11){
+                            forbidBox.call(this,"show");
+                        }else{
+                            forbidBox.call(this,"no");
+                        }
+                    }else{
+                        forbidBox.call(this,"no");
+                    }                    
+                }
+            })
+            
+            oForm.onsubmit=function(){
+                /*空值标记*/
+                var flag=0;
+                $mustInput.each(function(index,item){
+                    if(this.value==""){
+                        forbidBox.call(this,"show");
+						remind({
+                            obj:this,
+                            text:"此项不能为空"
+                        });
+                        flag++;
+                    }else{
+                        forbidBox.call(this,"no");
+                    }                
+                })
+                if(phone.value.length!=11 /*|| !phoneReg.test(phone.value)*/){
+                    forbidBox.call(phone,"show");
+					remind({
+                        obj:phone,
+                        text:"请输入11位手机号码"
+                    });
+                    flag++;
+                }
+                /*有一个空则不能提交*/
+                if(flag){
+                    return false;
+                }
+                /*全部通过*/
+                if(flag==0){
+                    /*$mustInput.each(function(index,item){
+                         setCookie(this.id,this.value||this.innerHTML,1);         
+                    })*/  
+                    location.href = "result.html";                 
+                }  
+            } 
+        }(jQuery,window)
+    </script>
+</body>
+</html>

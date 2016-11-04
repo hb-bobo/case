@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+		<meta name="format-detection" content="telephone=no" />
+		<title>管理系统系统管理</title>
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="../plugins/fileinput/fileinput.min.css" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+		<style>
+			html,
+			body {
+				background-color: #f2f2f2;
+			}
+			/* 内容模块 */
+			
+			.module {
+				padding: 50px 0 0;
+				text-align: center;
+			}
+			@media screen and (min-width:420px) and (max-width:768px){
+				.col-sm-3{width: 50%;float: left;}
+			}
+			@media screen and (min-width:320px) and (max-width:420px){
+				.col-sm-3{width: 50%;float: left;}
+				.module ul.uls>li ul li{width:3.5em;}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="top navbar-inverse" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">切换导航</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="../index.html">首页</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">系统管理 <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="user-admin.html">用户管理</a></li>
+								<li><a href="sysRole.html">角色管理</a></li>
+								<li><a href="Menu.html">菜单管理</a></li>
+								<li><a href="sysLog.html">系统日志</a></li>
+								<li><a href="#">其他功能</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 主要内容 -->
+		<div class="container module">
+			<div class="module-title">
+				<span>用户管理</span>
+				<a class="add btn btn-primary" data-toggle="modal" data-target="#myModal1">
+					上传
+				</a>
+			</div>
+			<div class="select-div">
+				<input type="text" placeholder="输入工号、姓名" />
+				<input type="button" value="查询" class='btn btn-primary'/>
+			</div>
+			
+			<ul class="uls">
+				<li>
+					<a href="#">
+						<div class="row">
+							<div class="col-sm-3">
+								<ul>
+									<li><label>apk名称</label></li>
+									<li><span>apk名称</span></li>
+									<div class="clear"></div>
+								</ul>
+							</div>
+							<div class="col-sm-3">
+								<ul>
+									<li><label>apk包名</label></li>
+									<li><span>apk包名</span></li>
+									<div class="clear"></div>
+								</ul>
+							</div>
+							<div class="col-sm-3">
+								<ul>
+									<li><label>apk版本名</label></li>
+									<li><span>apk版本名</span></li>
+									<div class="clear"></div>
+								</ul>
+							</div>
+							<div class="col-sm-3">
+								<ul>
+									<li><label>apk版本号</label></li>
+									<li><span>apk版本号</span></li>
+									<div class="clear"></div>
+								</ul>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-3">
+								<ul>
+									<li><label>url</label></li>
+									<li><span>http</span></li>
+									<div class="clear"></div>
+								</ul>
+							</div>
+							<div class="col-sm-3">
+								<ul>
+									<li><label>创建时间</label></li>
+									<li><span>2016-01-28</span></li>
+									<div class="clear"></div>
+								</ul>
+							</div>
+							<div class="col-sm-3">
+								<ul>
+									<li><label>更新时间</label></li>
+									<li><span>2016-01-28</span></li>
+									<div class="clear"></div>
+								</ul>
+							</div>
+						</div>						
+					</a>
+					<div class="enrollstate">
+						<div class="enrollstate-btn">
+							<a class="btn btn-primary" data-toggle="modal" data-target="#myModal1">编辑</a>
+							<a class="btn btn-primary" data-toggle="modal" data-target="#myModal2">删除</a>
+							<div class="clear"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+				<li>
+					<a href="#">
+						<div class="row">
+							<div class="col-sm-3">
+								<ul>
+									<li><label>apk名称</label></li>
+									<li><span>apk名称</span></li>
+									<div class="clear"></div>
+								</ul>
+							</div>
+							<div class="col-sm-3">
+								<ul>
+									<li><label>apk包名</label></li>
+									<li><span>apk包名</span></li>
+									<div class="clear"></div>
+								</ul>
+							</div>
+							<div class="col-sm-3">
+								<ul>
+									<li><label>apk版本名</label></li>
+									<li><span>apk版本名</span></li>
+									<div class="clear"></div>
+								</ul>
+							</div>
+							<div class="col-sm-3">
+								<ul>
+									<li><label>apk版本号</label></li>
+									<li><span>apk版本号</span></li>
+									<div class="clear"></div>
+								</ul>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-3">
+								<ul>
+									<li><label>url</label></li>
+									<li><span>http</span></li>
+									<div class="clear"></div>
+								</ul>
+							</div>
+							<div class="col-sm-3">
+								<ul>
+									<li><label>创建时间</label></li>
+									<li><span>2016-01-28</span></li>
+									<div class="clear"></div>
+								</ul>
+							</div>
+							<div class="col-sm-3">
+								<ul>
+									<li><label>更新时间</label></li>
+									<li><span>2016-01-28</span></li>
+									<div class="clear"></div>
+								</ul>
+							</div>
+						</div>	
+					</a>
+					<div class="enrollstate">
+						<div class="enrollstate-btn">
+							<a class="btn btn-primary" data-toggle="modal" data-target="#myModal1">编辑</a>
+							<a class="btn btn-primary" data-toggle="modal" data-target="#myModal2">删除</a>
+							<div class="clear"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+			</ul>
+			<ul class="pagination">
+				<li><a href="#">&laquo;</a></li>
+				<li class="active"><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">&raquo;</a></li>
+			</ul>
+			<p class="paging">第1页，共10页</p>
+		</div>
+		<!-- 模态框1（Modal） -->
+		<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+							×
+						</button>
+						<h4 class="modal-title" id="myModalLabel">选择apk</h4>
+					</div>
+					<div class="modal-body">
+						<a>
+							<span class="no-border">
+								<input id="file-Portrait1" type="file">
+							</span>
+						</a>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-dismiss="modal">
+							保存
+						</button>
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+		</div>
+		<!-- /.modal -->
+		<!-- 模态框2（Modal） -->
+		<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+							×
+						</button>
+						<h4 class="modal-title" id="myModalLabel">删除</h4>
+					</div>
+					<div class="modal-body">
+						<p class="sure">确认删除？</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-dismiss="modal">
+							确认
+						</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">
+							取消
+						</button>
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+		</div>
+		<!-- /.modal -->
+		<script src="../js/jquery-1.11.3.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../plugins/fileinput/js/fileinput.min.js" ></script>
+		<script type="text/javascript" src="../plugins/fileinput/js/fileinput_locale_zh.js" ></script>
+		<script>
+			$(function() {
+				var Select = $(".modal-body a select");
+				Select.change(function() {
+					$(this).css("color", "#428bca");
+				});
+				$('#file-Portrait1').fileinput({
+                language: 'zh', //设置语言
+                allowedFileExtensions : ['jpg', 'png','gif'],//接收的文件后缀,
+                maxFileCount: 100,
+                enctype: 'multipart/form-data',
+                showUpload: true, //是否显示上传按钮
+                showCaption: true,//是否显示标题
+                browseClass: "btn btn-primary", //按钮样式             
+                previewFileIcon: "<i class='glyphicon glyphicon-king'></i>", 
+                msgFilesTooMany: "选择上传的文件数量({n}) 超过允许的最大数值{m}！",
+            });
+			});
+		</script>
+	</body>
+
+</html>

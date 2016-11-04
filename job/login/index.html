@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/base.css" />
+	<link rel="stylesheet" type="text/css" href="css/login.css" />
+	<link rel="stylesheet" type="text/css" href="font/iconfont.css" />
+	<title>登录</title>
+	<script src="js/jquery1.10.2.min.js"></script>
+</head>
+<body>
+	<div class="wrap flex-container">		
+		<div class="login-wrap f1">
+			<div class="login-title text-center">
+				<h2>TPM管理系统</h2>
+			</div>
+			<!-- 切换登录方式 -->
+			<div class="tab iconfont">
+				<div class="tab-account icon-erweima act">&#xe605;</div>
+				<div class="tab-qr-code icon-diannao">&#xe603;</div>
+			</div>
+			<!-- 账号登录部分 -->
+			<div class="account login active">
+				<div class="login-form">
+					<h2>账户登录</h2>
+					<div class="ueser">
+						<div class="icon text-center">
+							<i class="iconfont icon-yonghu">&#xe601;</i>
+						</div>
+						
+						<input type="text" class="input" id="user" placeholder="请输入用户名">
+						<span class="close iconfont icon-x">&#xe604;</span>
+					</div>
+					<div class="password">
+						<div class="icon text-center">
+							<i class="iconfont icon-iconfontsuo1">&#xe602;</i>
+						</div>
+						
+						<input type="password" class="input" id="password" placeholder="请输入密码">
+						<span class="close iconfont icon-x">&#xe604;</span>
+					</div>
+					<div class="login-links">
+						<a href="javascript:;">忘记密码?</a>
+					</div>
+					<div class="login-btn">
+						<input type="button" id="login-btn" value="登录">
+					</div>					
+				</div>
+			</div>
+			<!-- 二维码部分 -->
+			<div class="qr-code login">
+				<h2>手机扫码，安全登录</h2>
+				<div class="qr-img text-center">
+					<!-- 二维码 -->
+					<img id="QrImg" src="img/qrImg.png" alt="qr">
+					<img id="phone-img" src="img/saosao.png" alt="">
+				</div>
+				<div class="explain">
+					<i class="iconfont icon-saoyisao text-center">&#xe600;</i>
+					<span class="">拿起手机<i style="color:#0099FF">扫一扫</i></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/login.js"></script>
+</body>
+</html>

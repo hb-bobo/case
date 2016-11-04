@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+	<meta name="renderer" content="webkit" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no,email=no" />
+	<title>施耐德电气</title>
+	<link rel="stylesheet" type="text/css" href="./css/base.min.css" />
+	<link rel="stylesheet" type="text/css" href="./css/app.css" />
+	<link rel="stylesheet" type="text/css" href="./css/common.css" />
+</head>
+<style>
+html{font-size: 100px;}
+body{font-size: 16px;}
+</style>
+<script src="js/zepto.js"></script>
+<script src="js/touch.js"></script>
+<body>
+	<div class="wrap">
+		<!-- top为固定 -->
+		<div id="top" class="top">
+			<div class="head">
+				<!-- 顶部 -->
+				<div class="w container">
+					<div class="back f1">
+						<a class="back-btn" href="index.html"></a>
+					</div>
+					<div class="pb-title color-white text-center f8">
+						<h1>Pre-Bidding详情</h1>
+					</div>
+				</div>
+				<div class="clearfix bg-white user">
+					<div class="logo fl">
+						<img src="img/logo-sm.png" alt="" style="width:1.26rem ;height: 0.53rem">
+					</div>
+					<div class="iconfont fr icon-wode text-right">
+						<span class="my-name color-black">你好，任帅</span>
+					</div>
+				</div>
+				<div class="row-space-sm"></div>
+				<!-- 切换 -->
+				<div id="pb-tab" class="pb-tab clearfix" >
+					<a class="pre-bidding fl text-center full-4 active" href="javascript:;">
+						<span>产品/价格相关</span>
+					</a>
+					<a class="pre-bidding fl text-center full-4" href="javascript:;">
+						<span>项目/客户相关</span>
+					</a>
+					<a class="pre-bidding fl text-center full-4" href="javascript:;">
+						<span>审批相关</span>
+					</a>	
+				</div>				
+			</div>		
+		</div>		
+	
+		<div id="pb-item">
+			<!--pre-bidding产品/价格相关开始  -->
+			<div class="pb-item active">
+				<div class="list-panel">
+					<h3 class="list-title clearfix">
+						<span class="left">申请信息</span>
+						<a href="javascript:;" class="pb-more unfold right"></a>
+					</h3>
+					<ul class="list clearfix">
+						<li>
+							<span class="left">创建时间</span>
+							<span class="right">2016-06-03 10:34:25</span>
+						</li>
+						<li>
+							<span class="left">提交时间</span>
+							<span class="right">2016-06-03 10:34:25</span>
+						</li>
+						<li>
+							<span class="left">更新时间</span>
+							<span class="right">2016-06-03 10:34:25</span>
+						</li>
+						<li>
+							<span class="left">价格有效期至</span>
+							<span class="right">2016-06-03</span>
+						</li>
+						<li>
+							<span class="left">是否是RELTP客户</span>
+							<span class="right">否</span>
+						</li>
+						<li>
+							<span class="left">特价申请类别</span>
+							<span class="right">项目机会特价</span>
+						</li>
+						<li>
+							<span class="left">申请编号</span>
+							<span class="right">A00000002536-B0001</span>
+						</li>
+						<li>
+							<span class="left">一级审批人</span>
+							<span class="right">hao.wang</span>
+						</li>
+					</ul>
+				</div>
+				<div class="row-space-sm"></div>
+				<div class="list-panel">
+					<h3 class="list-title clearfix">
+						<span class="left">产品和价格信息</span>
+						<a href="javascript:;" class="pb-more unfold right"></a>
+					</h3>
+					<ul class="list clearfix">
+						<li>
+							<span class="left">Product Line</span>
+							<span class="right">PDACB</span>
+						</li>
+						<li class="option selected">
+							<span class="left">12KCIV<i class="color-yellow">/</i>--</span>
+							<span class="right color-green">通过</span>
+						</li>
+						<li class="option">
+							<span class="left ">12KCIV12s<i class="color-yellow">/</i>--</span>
+							<span class="right color-yellow">拒绝</span>
+						</li>
+						<li class="bg-gray radio-box">
+							
+							<span class="right"><input type="radio" name="Price-review" value="refuse"/>拒绝</span>
+							<span class="right"><input type="radio" name="Price-review" checked="checked" value="pass"/>通过</span>
+						</li>
+						<li class="bg-gray">
+							<span class="left">family1:</span>
+							<span class="left">12KvCvx</span>
+						</li>
+						<li class="bg-gray">
+							<span class="left">family2:</span>
+							<span class="left">--</span>
+						</li>
+						<li class="bg-gray">
+							<span class="left">申请金额（元/不含税）：</span>
+							<span class="left">1411161</span>
+						</li>
+						<li class="bg-gray">
+							<span class="left">申请特折系数：</span>
+							<span class="left">--</span>
+						</li>
+						<li class="bg-gray">
+							<span class="left">NC1折扣系数：</span>
+							<span class="left">--</span>
+						</li>
+						<li class="bg-gray">
+							<span class="left">特价使用额度（元）：</span>
+							<span class="left">15585.58</span>
+						</li>
+						<li class="bg-gray">
+							<span class="left">RELTP协号：</span>
+							<span class="left">--</span>
+						</li>
+						<li class="bg-gray">
+							<span class="left">RELTP协议名称：</span>
+							<span class="left">--</span>
+						</li>
+					</ul>
+				</div>
+				<div class="row-space-sm"></div>
+				<div class="list-panel">
+					<h3 class="list-title clearfix">
+						<span class="left">申请特殊折扣的原因及情况分析</span>
+						<a href="javascript:;" class="pb-more unfold right"></a>
+					</h3>
+					<ul class="list clearfix">
+						<li>
+							<span class="left">申请特殊折扣的原因</span>
+							<span class="right">国际、国内品牌的竞争</span>
+						</li>
+						<li>
+							<span class="left">主要参数与成套厂和使用意向</span>
+							<span class="right">--</span>
+						</li>
+						<li>
+							<span class="left">甲方意见</span>
+							<span class="right">--</span>
+						</li>
+						<li>
+							<span class="left">标书倾向</span>
+							<span class="right">--</span>
+						</li>
+						<li>
+							<span class="left">设计院评标意向</span>
+							<span class="right">--</span>
+						</li>
+						<li>
+							<span class="left">补充说明</span>
+							<span class="right">--</span>
+						</li>
+					</ul>
+				</div>
+				<div class="row-space-sm"></div>
+				<div class="list-panel">
+					<h3 class="list-title clearfix">
+						<span class="left">竞争对手价格分析</span>
+						<a href="javascript:;" class="pb-more unfold right"></a>
+					</h3>
+					<ul class="list clearfix">
+						<li>
+							<span class="left">Product Line</span>
+							<span class="right">PTACB</span>
+						</li>
+						<li class="option selected">
+							<span class="left">12KCIV<i class="color-yellow">/</i>--</span>
+							<span class="left">--</span>
+						</li>
+						<li class="option">
+							<span class="left ">12KvEV12s<i class="color-yellow">/</i>--</span>
+							<span class="right color-yellow">--</span>
+						</li>
+						<li class="bg-gray">
+							<span class="left">Family1:</span>
+							<span class="left">12KvCvx</span>
+						</li>
+						<li class="bg-gray">
+							<span class="left">Family2:</span>
+							<span class="left">--</span>
+						</li>
+						<li class="bg-gray">
+							<span class="left">竞争对手：</span>
+							<span class="left">--</span>
+						</li>
+						<li class="bg-gray">
+							<span class="left">竞争产品线：</span>
+							<span class="left">11</span>
+						</li>
+						<li class="bg-gray">
+							<span class="left">竞争对手价格系数：</span>
+							<span class="left">--</span>
+						</li>
+						<li class="bg-gray">
+							<span class="left">相当于=$=价格：</span>
+							<span class="left">--</span>
+						</li>
+						<li class="bg-gray">
+							<span class="left">备注：</span>
+							<span class="left">--</span>
+						</li>
+					</ul>
+				</div>
+				<div class="row-space-sm"></div>
+				<div class="list-panel">
+					<h3 class="list-title clearfix">
+						<span class="left">产品物料信息（分析折扣制和报价制）</span>
+						<a href="javascript:;" class="pb-more unfold right"></a>
+					</h3>
+					<ul class="list clearfix">
+						<li>
+							<span class="left">Family1</span>
+							<span class="right">EVS</span>
+						</li>
+						<li>
+							<span class="left">Family2</span>
+							<span class="right">--</span>
+						</li>
+						<li>
+							<span class="left">Ref/型号</span>
+							<span class="right">EVSH063</span>
+						</li>
+						<li>
+							<span class="left">描述</span>
+							<span class="right">好好</span>
+						</li>
+						<li>
+							<span class="left">MPG</span>
+							<span class="right">MS</span>
+						</li>
+						<li>
+							<span class="left">数量</span>
+							<span class="right">1,000</span>
+						</li>
+						<li>
+							<span class="left">列表单价（元/不含税）</span>
+							<span class="right">--</span>
+						</li>
+						<li>
+							<span class="left">列表总价</span>
+							<span class="right">--</span>
+						</li>
+						<li>
+							<span class="left">折扣系数</span>
+							<span class="right">--</span>
+						</li>
+						<li>
+							<span class="left">折后价（元/不含税）</span>
+							<span class="right">54.48</span>
+						</li>
+						<li>
+							<span class="left">折后总价（元）</span>
+							<span class="right">151,000</span>
+						</li>
+						<li>
+							<span class="left">lsLogistivMaterial</span>
+							<span class="right">否</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--pre-bidding产品/价格相关结束  -->
+
+			<!--项目/客户相关开始  -->
+			<div class="pb-item">
+				<div class="list-panel">
+					<h3 class="list-title clearfix">
+						<div class="left">OPP所属人基本信息</div><div class="color-red small">注：请提供工作所在省、市信息、供系统定位审批人</div>
+						<a href="javascript:;" class="pb-more unfold right"></a>
+					</h3>
+					<ul class="list clearfix">
+						<li>
+							<span class="left">姓名</span>
+							<span class="right">shuai-vicent.ren</span>
+						</li>
+						<li>
+							<span class="left">电话</span>
+							<span class="right">1503123467</span>
+						</li>
+						<li>
+							<span class="left">岗位</span>
+							<span class="right">jin/jin/ji Eu</span>
+						</li>
+						<li>
+							<span class="left">大区/省/市</span>
+							<span class="right">NA/北京/北京市</span>
+						</li>
+						<li>
+							<span class="left">单位</span>
+							<span class="right">NS</span>
+						</li>
+						<li>
+							<span class="left">部门</span>
+							<span class="right">--</span>
+						</li>
+					</ul>
+				</div>
+				<div class="row-space-sm"></div>
+				<div class="list-panel">
+					<h3 class="list-title clearfix">
+						<span class="left">OPP基本信息</span>
+						<a href="javascript:;" class="pb-more unfold right"></a>
+					</h3>
+					<ul class="list clearfix">
+						<li style="height: auto">
+							<span class="left">OPP机会名称</span>
+							<span class="right text-right" style="width: 70%;line-height: 0.4rem">NS-2016-NS_EU-SESA1748393-prebidding1.3-f-NSLVTransction</span>
+						</li>
+						<li>
+							<span class="left">最终用户项目 名称</span>
+							<span class="right">prebidding1.3</span>
+						</li>
+						<li>
+							<span class="left">CWTLeader标志</span>
+							<span class="right">N</span>
+						</li>
+						<li>
+							<span class="left">项目投资方/最终用户</span>
+							<span class="right">中国石油天然气集团公司</span>
+						</li>
+						<li>
+							<span class="left">最终用户所属类型</span>
+							<span class="right">--</span>
+						</li>
+						<li>
+							<span class="left">NS-MA客户</span>
+							<span class="right">--</span>
+						</li>
+						<li>
+							<span class="left">主要竞争对手名称</span>
+							<span class="right">--</span>
+						</li>
+						<li>
+							<span class="left">行业属性一级</span>
+							<span class="right">交通</span>
+						</li>
+						<li>
+							<span class="left">行业属性二级</span>
+							<span class="right">城市交通</span>
+						</li>
+						<li>
+							<span class="left">行业属性三级</span>
+							<span class="right">--</span>
+						</li>
+						<li>
+							<span class="left">Offer Package</span>
+							<span class="right">NSLVTransaction</span>
+						</li>
+						<li>
+							<span class="left">KA标识(KACode)</span>
+							<span class="right">--</span>
+						</li>
+						<li>
+							<span class="left">业务机会所在国家</span>
+							<span class="right">中国</span>
+						</li>
+						<li>
+							<span class="left">业务机会所在大区</span>
+							<span class="right">NA</span>
+						</li>
+						<li>
+							<span class="left">业务机会所在省/市/区(县)</span>
+							<span class="right">北京/北京市/怀柔区</span>
+						</li>
+					</ul>
+				</div>
+				<div class="row-space-sm"></div>
+				<div class="list-panel">
+					<h3 class="list-title clearfix">
+						<span class="left">CTW信息</span>
+						<a href="javascript:;" class="pb-more unfold right"></a>
+					</h3>
+					<ul class="list clearfix">
+						<li>
+							<span class="left">人员姓名</span>
+							<span class="right">--</span>
+						</li>
+						<li>
+							<span class="left">MainRode</span>
+							<span class="right">--</span>
+						</li>
+						<li>
+							<span class="left">分配百分比(%)</span>
+							<span class="right">--</span>
+						</li>
+						<li>
+							<span class="left">CWTLeader</span>
+							<span class="right">--</span>
+						</li>
+						<li>
+							<span class="left">BUSpecialist</span>
+							<span class="right">--</span>
+						</li>
+					</ul>
+				</div>
+				<div class="row-space-sm"></div>
+				<div class="list-panel">
+					<h3 class="list-title clearfix">
+						<span class="left">
+							OPPLevel-2(Opportunity line)信息
+						</span>
+						<a href="javascript:;" class="pb-more unfold right"></a>
+					</h3>
+					<ul class="list clearfix">
+						<li>
+							<span class="left">Product Line</span>
+							<span class="right">PDACB</span>
+						</li>
+						<li class="option selected">
+							<span class="left">12KCIV<i class="color-yellow">/</i>--</span>
+							<span class="right color-green">通过</span>
+						</li>
+						<li class="option">
+							<span class="left ">12KCIV12s<i class="color-yellow">/</i>--</span>
+							<span class="right color-yellow">拒绝</span>
+						</li>
+						<li class="bg-gray">
+							<span class="left">Family1:</span>
+							<span class="left">12KvCvx</span>
+						</li>
+						<li class="bg-gray">
+							<span class="left">Family2:</span>
+							<span class="left">--</span>
+						</li>
+						<li class="bg-gray">
+							<span class="left">预测金额（元）：</span>
+							<span class="left">1411161</span>
+						</li>
+						<li class="bg-gray">
+							<span class="left">预测数量：</span>
+							<span class="left">1</span>
+						</li>
+						<li class="bg-gray">
+							<span class="left">施工图上图品牌：</span>
+							<span class="left">--</span>
+						</li>
+						<li class="bg-gray">
+							<span class="left">设计院上图(施工图)标志</span>
+							<span class="left">--</span>
+						</li>
+						<li class="bg-gray">
+							<span class="left">投标结果：</span>
+							<span class="left">--</span>
+						</li>
+					</ul>
+				</div>
+				<div class="row-space-sm"></div>
+				<div class="list-panel">
+						<h3 class="list-title clearfix">
+							<span class="left">VCP信息</span>
+							<a href="javascript:;" class="pb-more unfold right"></a>
+						</h3>
+						<ul class="list clearfix">
+							<li>
+								<span class="left">业务机会合作客户</span>
+								<span class="right">中国石油天然气集团公司</span>
+							</li>
+							<li>
+								<span class="left">客户在业务机会中的扮演角色</span>
+								<span class="right">Mechanicl Contractor</span>
+							</li>
+							<li>
+								<span class="left">大区</span>
+								<span class="right">NA</span>
+							</li>
+							<li>
+								<span class="left">省/市</span>
+								<span class="right">北京/北京市</span>
+							</li>
+							<li>
+								<span class="left">客户负责人</span>
+								<span class="right">--</span>
+							</li>
+							<li>
+								<span class="left">是否为3PA PB</span>
+								<span class="right">否</span>
+							</li>
+							<li>
+								<span class="left">是否中标</span>
+								<span class="right">--</span>
+							</li>
+						</ul>
+				</div>
+				<div class="row-space-sm"></div>
+				<div class="list-panel">
+						<h3 class="list-title clearfix">
+							<span class="left">竞标管理</span>
+							<a href="javascript:;" class="pb-more unfold right"></a>
+						</h3>
+						<ul class="list clearfix">
+							<li>
+								<span class="left">竞标结果公布结果</span>
+								<span class="right">3016-05-31</span>
+							</li>
+							<li>
+								<span class="left">规定提交竞标文件日期</span>
+								<span class="right">3016-05-31</span>
+							</li>				
+						</ul>
+				</div>
+			</div>
+			<!--项目/客户相关结束  -->
+
+			<!--审批相关开始  -->
+			<div class="pb-item">
+				<div class="list-panel">
+					<h3 class="list-title clearfix">
+						<span class="left">E7MCB<i class="color-yellow">/</i>--</span>
+						<a href="javascript:;" class="pb-more unfold right"></a>
+					</h3>
+					<ul class="list clearfix">
+						<li>
+							<span class="left">Family1:</span>
+							<span class="right">E7MCB</span>
+						</li>
+						<li>
+							<span class="left">Family1:</span>
+							<span class="right">--</span>
+						</li>
+						<li>
+							<span class="left">处理人</span>
+							<span class="right">shuai-vincet.rem</span>
+						</li>
+						<li>
+							<span class="left">处理角色</span>
+							<span class="right">申请人</span>
+						</li>
+						<li>
+							<span class="left">开始时间</span>
+							<span class="right">2016-05-18 14:57:15</span>
+						</li>
+						<li>
+							<span class="left">结束时间</span>
+							<span class="right">2016-05-18 14:57:15</span>
+						</li>
+						<li>
+							<span class="left">处理时间</span>
+							<span class="right">0秒</span>
+						</li>
+						<li>
+							<span class="left">操作</span>
+							<span class="right">Create</span>
+						</li>
+						<li>
+							<span class="left">意见</span>
+							<span class="right">Create</span>
+						</li>
+						<li class="show-change">
+							<span class="left color-green">查看变更</span>
+							<span class="right color-green">></span>
+							<div class="change">
+								<div class="change-main">
+									<h3 class="change-title text-center">查看变更</h3>
+									<div class="change-close bg-yellow">×</div>
+									<ul class="change-list clearfix">
+										<li>
+											<span class="left">初始有效期</span>
+											<span class="left">--</span>
+										</li>
+										<li>
+											<span class="left">更改有效期</span>
+											<span class="left">--</span>
+										</li>
+										<li>
+											<span class="left">初始价格变差</span>
+											<span class="left">--</span>
+										</li>
+										<li>
+											<span class="left">更改价格变差</span>
+											<span class="left">--</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="row-space-sm"></div>
+				<div class="list-panel">
+					<h3 class="list-title clearfix">
+						<span class="left">E7MCB<i class="color-yellow">/</i>--</span>
+						<a href="javascript:;" class="pb-more unfold right"></a>
+					</h3>
+					<ul class="list clearfix">
+						<li>
+							<span class="left">Family1:</span>
+							<span class="right">E7MCB</span>
+						</li>
+						<li>
+							<span class="left">Family1:</span>
+							<span class="right">--</span>
+						</li>
+						<li>
+							<span class="left">处理人</span>
+							<span class="right">shuai-vincet.rem</span>
+						</li>
+						<li>
+							<span class="left">处理角色</span>
+							<span class="right">申请人</span>
+						</li>
+						<li>
+							<span class="left">开始时间</span>
+							<span class="right">2016-05-18 14:57:15</span>
+						</li>
+						<li>
+							<span class="left">结束时间</span>
+							<span class="right">2016-05-18 14:57:15</span>
+						</li>
+						<li>
+							<span class="left">处理时间</span>
+							<span class="right">0秒</span>
+						</li>
+						<li>
+							<span class="left">操作</span>
+							<span class="right">Create</span>
+						</li>
+						<li>
+							<span class="left">意见</span>
+							<span class="right">Create</span>
+						</li>
+						<li class="show-change">
+							<span class="left color-green">查看变更</span>
+							<span class="right color-green">></span>
+							<div class="change">
+								<div class="change-main">
+									<h3 class="change-title text-center">查看变更</h3>
+									<div class="change-close bg-yellow">×</div>
+									<ul class="change-list clearfix">
+										<li>
+											<span class="left">初始有效期</span>
+											<span class="left">--</span>
+										</li>
+										<li>
+											<span class="left">更改有效期</span>
+											<span class="left">--</span>
+										</li>
+										<li>
+											<span class="left">初始价格变差</span>
+											<span class="left">--</span>
+										</li>
+										<li>
+											<span class="left">更改价格变差</span>
+											<span class="left">--</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="row-space-sm"></div>
+			</div>				
+			<!--审批相关结束  -->
+		</div>
+	
+		<div class="footer">
+			<a hrer="javascript:;" class="btn-link btn-link-green ">确认</a>
+			<a hrer="javascript:;" class="btn-link btn-link-yellow ">待定</a>
+		</div>
+	</div>
+	<script src="js/index.js"></script>
+</body>
+</html>

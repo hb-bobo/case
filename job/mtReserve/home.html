@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+	<meta name="renderer" content="webkit" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no,email=no" />
+	<title>home</title>
+	<link rel="stylesheet" type="text/css" href="css/base.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/common.css" />		
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<style>
+html{font-size: 100px;}
+body{font-size: 18px;}
+.w{padding:0 .23rem;}
+#seach-form input[type=date],#seach-form input[type=time]{
+	width: 80%;
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	top:0;
+	line-height:2;
+	z-index: 10;
+}
+</style>
+<script src="js/zepto.js"></script>
+<body>
+	<div class="wrap">
+		<div class="login-head w text-center">
+			<h3>会议室预订</h3>
+			<div class="richScan">
+				<i class="iconfont icon-saoyisao"></i>
+			</div>
+		</div>
+		
+		<div id="seach-form" class="seach-form w">
+			<form action="seachResult.html">
+				<div id="region" class="form-group">
+					<label  class="act" for="unlimited-region">不限
+						<input type="radio" id="unlimited-region" value="unlimited" name="region" />
+					</label>					
+					<label  class="" for="beijing">北京
+						<input type="checkbox" id="beijing" value="beijing" name="region" />
+					</label>					
+					<label  class="" for="shanghai">上海
+						<input type="checkbox" id="shanghai" value="shanghai" name="region" />
+					</label>					
+				</div>
+				<div id="mt-type" class="form-group">
+					<label  class="act" for="all">全部
+						<input type="radio" id="all-mt" value="all" name="mt-type" />
+					</label>					
+					<label  class="" for="multimedia-mt">多媒体
+						<input type="checkbox" id="multimedia-mt" value="multimedia" name="mt-type" />
+					</label>					
+					<label  class="" for="common-mt">普通
+						<input type="checkbox" id="common-mt" value="common" name="mt-type" />
+					</label>	
+				</div>
+				<div id="NOP" class="form-group">
+					<label  class="act" for="one-tree">1-3人
+						<input type="radio" id="one-tree" value="1-3" name="NOP" />
+					</label>					
+					<label  class="" for="four-six">4-6人
+						<input type="radio" id="four-six" value="4-6" name="NOP" />
+					</label>					
+					<label  class="" for="seven-nine">7-9人
+						<input type="radio" id="seven-nine" value="7-9" name="NOP" />
+					</label>
+					<label  class="" for="tenPeopleUp">10人以上
+						<input type="radio" id="tenPeopleUp" value="10+" name="NOP" />
+					</label>		
+				</div>
+				<div id="checkTime" class="form-group pull-w">
+					<div class="col-6 text-left">
+						<span>会议日期</span>
+					</div>
+					<div class="col-6 text-right date">
+						<span class="muted">2016-06-13</span>
+						<input class="sysDate" type="date"/>
+						<i class="iconfont icon-zuozuo-copy1"></i>
+					</div>
+				</div>
+				<div class="form-group pull-w">
+					<div class="col-6 text-left">
+						<span>开始时间</span>
+					</div>
+					<div class="col-6 text-right date">
+						<span class="muted">09:00</span>
+						<input class="sysDate" type="time"/>
+						<i class="iconfont icon-zuozuo-copy1"></i>
+					</div>
+				</div>
+				<div class="form-group pull-w">
+					<div class="col-6 text-left">
+						<span>结束时间</span>
+					</div>
+					<div class="col-6 text-right date">
+						<span class="muted">10:00</span>
+						<input class="sysDate" type="time"/>
+						<i class="iconfont icon-zuozuo-copy1"></i>
+					</div>
+				</div>
+				<input type="submit" class="btn seach-btn" value="查询"/>
+			</form>
+		</div>
+		<footer class="text-center full-row home-footer">
+			<div class="col-6">
+				<a href="javascript:;" class="act">会议室预订</a>
+			</div>
+			<div class="col-6">
+				<a href="myReserve.html" class="">我的预订</a>
+			</div>
+		</footer>
+	
+	</div>
+	<script src="js/index.js"></script>
+	 <script src="js/touch.js"></script> 
+	<script>
+		!function(){
+			
+			/*所有单选按钮*/
+			var numPeople=document.getElementById('NOP');
+			var aRadio=numPeople.querySelectorAll("input[type=radio]");//label;
+			var $region=$('#region input[name="region"]'),
+				$mtType=$('#mt-type input[name="mt-type"]');
+
+			for(var i=0;i<aRadio.length;i++){
+				aRadio[i].parentNode.addEventListener("touchstart",function(){
+					/*from-group*/
+					var oGroup=this.parentNode;
+					for(var j=0,len=oGroup.children.length;j<len;j++){
+						oGroup.children[j].className="";
+					}
+					this.className="act";//被选中的					
+				},false)				
+			}
+
+			/*$region.parent()为label*/
+			$region.parent().on("tap",act);
+			$mtType.parent().on("tap",act);
+			function act(){
+				this.className=="act"?$(this).removeClass("act"):$(this).addClass("act");
+				/*点击后面的时，清楚第一个样式*/
+				if($(this).index()!=0 && this.className=="act") {
+					$(this).parent().children().eq(0).removeClass("act");
+				}
+				/*点击第一个时清除后面的样式*/
+				else if($(this).index()==0 && this.className=="act"){
+					$(this).parent().children().removeClass("act");
+					$(this).addClass("act");
+				}
+			}
+
+			/*时间*/
+			var seachForm=document.getElementById("seach-form"),
+				allDiv=seachForm.querySelectorAll(".date"),
+				aSysDate=seachForm.querySelectorAll(".sysDate");
+
+				/*缓存搜索时间*/
+				aSysDate[0].previousElementSibling.innerHTML=getTime();
+				localStorage.setItem("seachDate",aSysDate[0].previousElementSibling.innerHTML);
+				setCookie('seachDate',aSysDate[0].previousElementSibling.innerHTML,1);
+				for(var i=0,len=aSysDate.length;i<len;i++){
+					(function(index){
+						aSysDate[i].onfocus=function(){
+							this.readonly="readonly";
+							return false;
+						}
+						aSysDate[i].oninput=function(){
+							allDiv[index].children[0].innerHTML=this.value;
+							/*缓存搜索时间*/
+							if(this.type=="date"){
+								localStorage.setItem("seachDate",this.value);
+								setCookie('seachDate',this.value,1)
+							}
+						}
+					})(i)
+				}				
+		}(window)
+
+	</script>
+</body>
+</html>

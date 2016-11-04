@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+	#wrap{list-style: none;text-align: center;position: relative;padding: 0px;margin:0px;}
+	#wrap li{float:left;width: 100px;line-height: 30px;border:1px solid #85D8D1;}
+	#box{background: #FF66B3;width: 100px;height: 30px;opacity: 0.6;position: absolute;left:0px;z-index: -1}
+</style>	
+<script type="text/javascript">
+	window.onload=function(){
+		var aLi=document.getElementsByTagName("li");
+		var oBox=document.getElementById('box');
+		var timer=null;
+		for(var i=0;i<aLi.length;i++){
+			aLi[i].onmouseover=function(){
+				move(oBox,this.offsetLeft)
+			
+			}
+		}
+		var speed=0;
+		var left=0;
+		function move(obj,iTarget){
+			clearInterval(timer);
+			timer=setInterval(function(){
+				speed+=(iTarget-left)/5;
+				speed*=0.9;
+				left+=speed;
+				obj.style.left=Math.round(left)+"px";
+				if(iTarget==obj.offsetLeft && Math.abs(speed)<1){
+					clearInterval(timer);
+				}
+			},10)
+		}
+	}
+</script>	
+</head>
+<body>
+	<ul id="wrap">
+		<li>首页</li>
+		<li>路西博客</li>
+		<li>路西博客</li>
+		<li>路西博客</li>
+		<li>路西博客</li>
+		<li>路西博客</li>
+		<li id="box"></li>
+	</ul>
+</body>
+</html>

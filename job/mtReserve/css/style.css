@@ -1,0 +1,286 @@
+@charset "UTF-8";
+/*color*/
+/*login*/
+.login-head {
+  height: .84rem;
+  width: 100%;
+  -background: #2e3941;
+  background: #0575C1;
+  color: #fff;
+  box-sizing: border-box;
+  position: relative; }
+
+.login-head > h3 {
+  height: 100%;
+  font-size: .35rem;
+  line-height: .84rem; }
+
+.login-logo {
+  margin: 0 auto;
+  margin-top: .59rem;
+  text-align: center; }
+
+.logo-img > img {
+  width: 4.5rem;
+  height: 2rem; }
+
+.logo-title > h2 {
+  color: #050F52;
+  font-size: .65rem;
+  line-height: 2;
+  -webkit-mask: -webkit-linear-gradient(transparent 25%, white);
+  -webkit-background-clip: text; }
+
+.password {
+  margin-top: .2rem; }
+
+/*input*/
+.login-form {
+  width: 100%;
+  margin-top: .54rem; }
+
+.login-btn,
+.seach-btn {
+  height: .88rem;
+  margin-top: .31rem; }
+
+.btn {
+  width: 100%;
+  color: #fff;
+  -background: #2E3941;
+  background: #0575C1; }
+
+footer {
+  position: fixed;
+  bottom: .2rem;
+  max-width: 750px;
+  font-size: 0.35rem; }
+
+.footer {
+  position: fixed;
+  max-width: 750px;
+  bottom: 0rem;
+  font-size: 0.35rem; }
+
+.input-group > .iconfont {
+  line-height: 0.88rem;
+  padding-left: 0.26rem; }
+
+.input-group > input {
+  display: inline-block;
+  line-height: .88rem;
+  margin-left: 0.1rem;
+  padding-left: 0.1rem;
+  width: 80%; }
+
+.input-group .close {
+  line-height: .88rem;
+  font-size: 0.3rem;
+  display: none; }
+
+/*home*/
+.login-head > .richScan {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0.84rem;
+  height: 0.84rem; }
+
+.login-head .icon-saoyisao,
+.login-head .icon-zuozuo-copy {
+  line-height: .84rem; }
+
+.seach-form .form-group {
+  border-top: 1px solid #d9d9d9;
+  height: 0.88rem;
+  line-height: 0.88rem; }
+
+.seach-form label {
+  padding: 0.08rem 0.06rem 0.08rem 0.08rem;
+  border-radius: 4px;
+  margin-right: 0.4rem; }
+
+.seach-form label.act {
+  -background: #2E3941;
+  background: #0575C1;
+  color: #fff; }
+
+.seach-form input[type="radio"],
+.seach-form input[type="checkbox"] {
+  display: none; }
+
+.seach-form input[type="radio"]:checked {
+  display: line-block; }
+
+.seach-form {
+  font-size: 0.35rem; }
+
+.seach-btn {
+  background: #fff;
+  color: #000;
+  margin-top: 1.3rem;
+  border: 1px solid #000; }
+
+.home-footer > div > a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: #6AA2C5;
+  color: #fff;
+  height: 0.98rem;
+  line-height: .98rem; }
+
+.home-footer > div > a.act {
+  -background: #2E3941;
+  background: #0575C1; }
+
+.home-footer {
+  bottom: 0;
+  font-size: 0.35rem; }
+
+/*搜索结果*/
+.top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 750px; }
+
+.login-head .back {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0.84rem;
+  height: 0.84rem;
+  color: #fff; }
+
+.yesterday,
+.tomorrow {
+  -background: #2E3941;
+  background: #0575C1; }
+
+.mt-date input,
+.mt-date span {
+  line-height: .88rem;
+  font-size: .35rem;
+  font-family: "microsoft yahei",sans-serif,PingFangSC-Regular,Helvetica,"Droid Sans",Arial; }
+
+.date {
+  position: relative; }
+
+.mt-date > .date {
+  background: #F7F7F7;
+  color: #0086E8;
+  border-bottom: 2px solid #0086E8; }
+
+.meeting-list {
+  font-size: .32rem;
+  margin-top: 1.74rem; }
+
+.mt-item {
+  background: #F2F2F2;
+  border-top: 0.3rem solid #F2F2F2; }
+
+.mt-item > .mt-name {
+  height: .85rem;
+  line-height: 0.85rem; }
+
+.mt-item > .mt-name,
+.mt-item .reserve {
+  background: #FFF; }
+
+.mt-item .reserve > a.disabled {
+  color: #8A8A8A;
+  border-color: #8A8A8A; }
+
+.mt-item > .mt-name a:link {
+  color: #0086E8;
+  margin-left: 0.15rem; }
+
+.mt-item > .mt-name a:visited {
+  color: #0086E8; }
+
+.mt-item .reserve-btn {
+  width: 1.48rem;
+  color: #000;
+  background: #fff;
+  border: 1px solid #000;
+  margin: .12rem .26rem; }
+
+.mt-item .reserve > input.disabled {
+  color: #ccc; }
+
+.reserve-btn {
+  height: .62rem;
+  width: 1.2rem;
+  line-height: .62rem; }
+
+.mt-info {
+  color: #808080;
+  padding: .12rem;
+  font-size: .3rem; }
+
+.mt-info img {
+  width: 2rem;
+  height: 1.80rem; }
+
+.mt-info p,
+.mt-info > div.col-12 {
+  line-height: 1.6; }
+
+.mt-item > .mt-info .iconfont {
+  font-size: .3rem;
+  line-height: .3rem; }
+
+/*订单确认*/
+.other ul {
+  background: #fff;
+  border-bottom: .32rem solid #F2F2F2; }
+
+.other ul > li {
+  line-height: 2.5;
+  border-bottom: 1px solid #D9D9D9; }
+
+.other ul > li:last-child {
+  border-bottom: 0; }
+
+.other ul > li .text-right {
+  color: #808080; }
+
+.mtContent input {
+  border: 0; }
+
+.mtContent .text-right {
+  position: relative; }
+
+.mtContent .text-right > span {
+  position: absolute;
+  right: 0;
+  top: .02rem; }
+
+.btn-confirm {
+  height: .87rem;
+  width: 6.78rem;
+  background: #fff;
+  color: #000;
+  margin: 0 .36rem;
+  border: 1px solid #000; }
+
+/*我的预订*/
+.orderCategory > div {
+  padding: .1rem .24rem;
+  background: #FFF;
+  font-size: .32rem; }
+
+.allOrder, .finishedReserve, .finishedOrder {
+  height: .66rem;
+  background: #F2F2F2;
+  border: 1px solid #D9D9D9;
+  border-radius: 2px;
+  line-height: .66rem; }
+
+.orderCategory div.act {
+  background: #fff;
+  color: #0086E8; }
+
+/*# sourceMappingURL=style.css.map */

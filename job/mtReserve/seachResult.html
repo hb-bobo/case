@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+	<meta name="renderer" content="webkit" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no,email=no" />
+	<title>会议室搜索结果</title>
+	<link rel="stylesheet" type="text/css" href="css/base.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/common.css" />		
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<style>
+html{font-size: 100px;}
+body{font-size: 18px;}
+.w{padding:0 .19rem;}
+#date{-visibility: hidden;position: absolute;left:0;top:0;opacity:0;z-index: 10;width: 100%;}
+</style>
+<script src="js/zepto.js"></script>
+<body>
+	<div class="wrap">
+		<div class="top">
+			<div class="login-head w text-center">
+				<a class="back" href="home.html">
+					<i class="iconfont icon-zuozuo-copy"></i>
+				</a>
+				<h3>会议室预订查询结果</h3>
+			</div>
+			<div id="mt-date" class="mt-date full-row">
+				<div class="col-3 yesterday">
+					<input id="lastDay" class="btn" type="button" value="前一天" />
+				</div>
+				<div class="col-6 date text-center">
+					 <span class="show-date">2016-07-08</span>
+					 <input id="date" type="date" value="">
+				</div>
+				<div class="col-3 tomorrow">
+					<input id="afterDay" class="btn" type="button" value="后一天" />				
+				</div>
+			</div>
+		</div>
+		<div class="meeting-list">
+			<ul class="list">
+				<li class="mt-item full-row">
+					<div class="mt-name w">
+						<div class="col-8 full-row">
+							<span>多媒体会议室A</span>
+							<a href="mtInfo.html">>>预订详情</a>
+						</div>
+						<div class="col-4 text-right">
+							<span class="color-green">可用</span>							
+						</div>
+					</div>
+					<div class="mt-info full-row">
+						<div class="col-4 w">
+							<img src="img/mt-img_03.png" alt="会议室图片" width="180" height="156">						
+						</div>
+						<div class="col-8 w">
+							<p class="right">会议室类型: 多媒体会议室</p>
+							<p class="left">可容纳人数: 8</p>							
+							<p class="left">会议室地点: 安西路100号音智达信息科技有限公司二漏会议室</p>
+						</div>
+					</div>
+					<div class="reserve full-row text-right">
+						<a href="confirmOrder.html" class="btn reserve-btn">预订</a>
+					</div>
+				</li>
+				<li class="mt-item full-row">
+					<div class="mt-name w">
+						<div class="col-8 full-row">
+							<span>多媒体会议室B</span>
+							<a href="mtInfo.html">>>预订详情</a>
+						</div>
+						<div class="col-4 text-right">
+							<span class="color-red">禁用</span>							
+						</div>
+					</div>
+					<div class="mt-info full-row">
+						<div class="col-4 w">
+							<img src="img/mt-img_03.png" alt="会议室图片" width="180" height="156">						
+						</div>
+						<div class="col-8 w">
+							<p class="right">会议室类型: 多媒体会议室</p>
+							<p class="left">可容纳人数: 8</p>							
+							<p class="left">会议室地点: 安西路100号音智达信息科技有限公司二漏会议室</p>
+						</div>
+					</div>
+					<div class="reserve full-row text-right">
+						<a href="javascript:;" class="btn reserve-btn disabled">预订</a>
+					</div>
+				</li>
+				<li class="mt-item full-row">
+					<div class="mt-name w">
+						<div class="col-8 full-row">
+							<span>多媒体会议室C</span>
+							<a href="mtInfo.html">>>预订详情</a>
+						</div>
+						<div class="col-4 text-right">
+							<span class="color-green">可用</span>							
+						</div>
+					</div>
+					<div class="mt-info full-row">
+						<div class="col-4 w">
+							<img src="img/mt-img_03.png" alt="会议室图片" width="180" height="156">						
+						</div>
+						<div class="col-8 w">
+							<p class="right">会议室类型: 多媒体会议室</p>
+							<p class="left">可容纳人数: 8</p>							
+							<p class="left">会议室地点: 安西路100号音智达信息科技有限公司二漏会议室</p>
+						</div>
+					</div>
+					<div class="reserve full-row text-right">
+						<a href="confirmOrder.html" class="btn reserve-btn">预订</a>
+					</div>
+				</li>
+				<li class="mt-item full-row">
+					<div class="mt-name w">
+						<div class="col-8 full-row">
+							<span>多媒体会议室D</span>
+							<a href="mtInfo.html">>>预订详情</a>
+						</div>
+						<div class="col-4 text-right">
+							<span class="color-green">可用</span>							
+						</div>
+					</div>
+					<div class="mt-info full-row">
+						<div class="col-4 w">
+							<img src="img/mt-img_03.png" alt="会议室图片" width="180" height="156">						
+						</div>
+						<div class="col-8 w">
+							<p class="right">会议室类型: 多媒体会议室</p>
+							<p class="left">可容纳人数: 8</p>							
+							<p class="left">会议室地点: 安西路100号音智达信息科技有限公司二漏会议室</p>
+						</div>
+					</div>
+					<div class="reserve full-row text-right">
+						<a href="confirmOrder.html" class="btn reserve-btn">预订</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+		<footer class="text-center full-row home-footer">
+			<div class="col-6">
+				<a href="home.html" class="act">会议室预订</a>
+			</div>
+			<div class="col-6">
+				<a href="myReserve.html" class="">我的预订</a>
+			</div>
+		</footer>
+	</div>	
+	 <script src="js/touch.js"></script> 
+	 <script src="js/index.js"></script>
+	<script>
+		!function(){
+			var oMtDate=document.getElementById('mt-date'),
+				oLastDay=document.getElementById("lastDay"),
+				oAfterDay=document.getElementById("afterDay"),
+				showDate=oMtDate.querySelector(".show-date"),
+				oDate=showDate.nextElementSibling;
+				/*设置搜索时间*/
+				showDate.innerHTML=localStorage.getItem("seachDate");
+				showDate.innerHTML=getCookie('seachDate');
+				/*选择时间后*/
+				oDate.oninput=function(){
+					showDate.innerHTML=this.value;
+				} 
+
+				var setDay=new setTime(showDate.innerHTML);
+				oLastDay.addEventListener("touchstart",function(){
+					if(getTime()==showDate.innerHTML){
+						return false;
+					}else{	
+						showDate.innerHTML=new setTime(showDate.innerHTML).lastDay();
+					}
+				},false)
+				oAfterDay.addEventListener("touchstart",function(){
+					showDate.innerHTML=new setTime(showDate.innerHTML).nextDay();
+				},false)
+
+				function setTime(time){
+					var arr=time.split("-");
+					this.years=arr[0];
+					this.month=arr[1];
+					this.day=arr[2];				
+				}
+				setTime.prototype={
+					constructor:setTime,
+					lastDay:function(){
+						alert(this.day--);
+					},
+					lastMonth:function(){
+						this.month<0?this.month=12:this.month--;
+						return fillZero(this.month);
+					},
+					lastYears:function(){
+						this.years<1920?this.years=1920:this.years=this.years;
+						return this.years--;
+					},
+					nextDay:function(){
+						var arr31=[1,3,5,7,8,10,12];
+						var arr30=[4,6,9,11];
+						/*闰年366天，二月29天*/
+						if((this.years%4==0 && this.years%100!==0) || this.years%400==0){
+							dayNum.call(this);
+						}else{
+							dayNum.call(this);
+							
+						}
+						function dayNum(){
+							for(var i=0;i<arr31.length;i++){
+								if(parseInt(this.month)==arr31[i]){
+									if(this.day>31) {
+										this.day=0;
+										this.nextMonth();
+									}
+									showDate.innerHTML=fillZero(parseInt(this.day)+1);
+								}
+							}
+							for(var i=0;i<arr30.length;i++){
+								if(parseInt(this.month)==arr31[i]){
+									if(this.day>30) {
+										this.day=0;
+										this.nextMonth();
+									}
+									return fillZero(parseInt(this.day)+1);
+								}
+							}
+						}
+					},
+					nextMonth:function(){
+						this.month>12?this.month=1:this.month++;
+						return fillZero(this.month);
+					},
+					nextYears:function(){
+						this.years>2099?this.years=2099:this.years=this.years;
+						return this.years++;
+					},
+
+				}
+		}(window)
+	</script>
+</body>
+</html>

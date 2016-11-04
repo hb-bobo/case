@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+		<meta name="format-detection" content="telephone=no" />
+		<title>管理系统登录页</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/login.css" />
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+		<style>
+			html,body{background-color: #f2f2f2;}
+		</style>
+	</head>
+	<body>
+		<div class="login">
+			<div class="logo">
+				<img src="img/logo.png" />
+			</div>
+			<h1>APP管理系统</h1>
+			<div class="login-main">
+				<div class="account-pass">
+					<div class="account-div"><input type="text"placeholder="输入账号"/></div>
+					<div class="pass-div"><input type="text"placeholder="输入密码"/></div>
+				</div>
+				<div class="remember-account checkbox">
+					<input type="checkbox" id="remember" checked>
+					<label for="remember">记住账号</label>
+				</div>
+				<div class="login-btn">
+					<input type="button" value="登 录" class="btn-info1"/>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script>
+    		$(function () {
+    			$(".btn-info1").click(function(){
+    				
+    			});
+   			 });
+		</script>		
+	</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+		<meta name="format-detection" content="telephone=no" />
+		<title>管理系统首页</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css" />
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+		<style>
+			html,
+			body {
+				background-color: #f2f2f2;
+			}
+			/* 内容模块 */
+			.module {
+				padding: 60px 20px 0;
+				text-align: center;
+			}
+			.module h1{font:normal 26px/1.5 "方正黑体简体","微软雅黑",arial;text-align: center;}
+			.module>p{text-align: right;padding-right: 15px;box-sizing: border-box;}
+			.module .col-md-4 {
+				text-align: center;
+				padding: 0 5px;
+			}
+			.module .col-md-4>a{
+				display:inline-block;
+				width: 120px;
+				background: #1C549F;
+				padding:20px 0px 3px;
+				color: #fff;
+				margin: 0 5px 15px;
+				}
+			.module .col-md-4>a span{display: inline-block;height: 60px;}
+			.module .col-md-4>a p{text-align: center;font-size: 16px;padding-top: 10px;}
+		</style>
+	</head>
+
+	<body>
+		<div class="top navbar-inverse" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">切换导航</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">首页</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">系统管理 <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="page/user-admin.html">用户管理</a></li>
+								<li><a href="page/sysRole.html">角色管理</a></li>
+								<li><a href="page/Menu.html">菜单管理</a></li>
+								<li><a href="page/sysLog.html">系统日志</a></li>
+								<li><a href="#">其他功能</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<a class="quit" href="login.html">
+				<img src="img/close.png" />
+			</a>
+		</div>
+		<!-- 主要内容 -->
+		<div class="container module">
+			<h1>APP管理系统</h1>
+			<p>系统管理员猴子</p>
+			<!-- 简介 -->
+			<div class="row">
+				<div class="col-md-4">
+					<a href="page/user-admin.html">
+						<span><img src="img/index01.png" style="height: 50px;"/></span>
+						<p>用户管理</p>
+					</a>
+					<a href="page/sysRole.html">
+						<span><img src="img/index02.png" style="height: 50px;"/></span>
+						<p>角色管理</p>
+					</a>
+					<div class="clear"></div>
+				</div>
+				<div class="col-md-4">
+					<a href="page/Menu.html">
+						<span><img src="img/index03.png"style="height: 50px;"/></span>
+						<p>菜单管理</p>
+					</a>
+					<a href="#">
+						<span><img src="img/index05.png"style="height: 50px;"/></span>
+						<p>修改密码</p>
+					</a>
+					<div class="clear"></div>
+				</div>
+				<div class="col-md-4">
+					<a href="#">
+						<span><img src="img/index04.png"style="height: 60px;"/></span>
+						<p>系统日志</p>
+					</a>
+					<a href="#">
+						<span><img src="img/index06.png"style="height: 50px;"/></span>
+						<p>其他功能</p>
+					</a>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script>
+			$(function() {
+				
+			});
+		</script>
+	</body>
+
+</html>

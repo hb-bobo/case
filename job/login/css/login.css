@@ -1,0 +1,55 @@
+@media only screen and (min-width:300px) and (max-width:640px){
+	.wrap{padding:0 !important;}
+    .wrap .login-wrap{width: 320px;height:360px;left:0;top:0;position: relative;margin:auto;margin-top:15%}
+    #user,#password{width:83% !important;}
+}
+html,body,.wrap{width: 100%;height: 100%;overflow: hidden;}
+.wrap{padding:0 10px;background: #F3F3F3}
+.login-wrap{width: 400px;height:390px;position:absolute;left:50%;top:50%;margin-left:-230px;margin-top:-160px;border:1px solid #CCCCCC;border-radius:5px;padding:26px 29px 0 29px;background: #fff;}
+/*标题*/
+.login-title{width:320px;margin:0 auto;position: absolute;top:-60px;left:50%;margin-left:-160px;color: #000;font-size: 150%}
+/*切换二维码*/
+.tab{position: absolute;right:2px;top:5px;}
+.tab>div{display: none;height: 0;}
+.tab .act{display:block;}
+.login{display: none}
+.login-wrap>div.active{display: block;}
+.tab-account,.tab-qr-code{cursor:pointer;}
+/*账号登录*/
+.ueser,.password{margin-top:30px;width: 100%;height:48px;position: relative;}
+.icon{display: inline-block;width:48px;height: 48px;background: #ccc;position: absolute;left: 1px;top:1px;*top:2px;}
+#user,#password{border:0;width:87%;height: 28px;padding:10px 0 10px 50px;border:1px solid #ccc;}
+.login-links{width: 100%;margin-top:35px;}
+#login-btn{border:0;display: inline-block;width:100%;height: 48px;cursor: pointer;border-radius:5px;margin-top:15px;background: #0099FF;font-size: 20px;color: #fff;}
+.close{position: absolute;right: 0;top:18px;cursor:pointer;color: #ccc;display: none}
+.close:hover{color: #000}
+/*二维码登录*/
+.qr-img{margin:0 auto;margin-top:100px;position: relative;}
+#QrImg{	
+		transform: translate(0,0);
+		-webkit-transform: translate(0,0);
+		transition:transform 1s ease;
+		-webkit-transition:transform 1s ease;}		
+.explain{margin-top:30px;padding:0 40px;font-size: 20px}
+#phone-img{position: absolute;top:-10px;right:100px;display: none}
+/* 浮动与清除浮动 */
+.pull-left{float:left;}
+.pull-right{float:right;}
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+/*flex布局*/
+.flex-container{display: flex;display: -webkit-flex;display: -webkit-box;flex-wrap:nowrap;-webkit-align-items: center;-webkit-box-align: center;align-items: center;align-content:center;-webkit-align-content:center;flex-direction: row}
+.f1{flex: 1;-webkit-box-flex: 1;-webkit-flex: 1;}
+.f2{flex: 2;-webkit-box-flex: 2;-webkit-flex: 2;}
+.f3{flex: 3;-webkit-box-flex: 3;-webkit-flex: 3;}
+.f8{flex: 8;-webkit-box-flex: 8;-webkit-flex: 8;}
+/* 百分比布局*/
+.full-w{width: 100%;overflow: hidden;}
+.full-12{width: 100%}
+.full-8{width: 66.66%}
+.full-6{width: 50%}
+.full-4{width: 33.33%}
+.full-3{width: 25%}
+/* 文字居中 */
+.text-left{text-align:left}
+.text-center{text-align:center}
+.text-right{text-align:right}

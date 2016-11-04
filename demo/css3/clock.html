@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+#clock{width:300px;height: 300px;border:1px solid #000;border-radius:50%;box-shadow: 1px 2px 2px #000;position: relative;}
+#clock div{transform-origin:center bottom;}
+#clock .hour{position: absolute;left:50%;top:50%;margin-left:-4px;margin-top:-50px;width: 8px;height: 50px;background: #000;}
+#clock .min{position: absolute;left:50%;top:50%;margin-left:-3px;margin-top:-80px;width: 6px;height: 80px;background: #000;}
+#clock .sec{position: absolute;left:50%;margin-left:-2px;width: 4px;height: 4px;background:red;}
+#clock .sec{transform-origin:center 150px;}
+#clock .cap{position: absolute;left:50%;top:50%;margin-left:-10px;margin-top:-10px;width: 20px;height: 20px;border-radius:50%;background: #000;}
+#clock span{position: absolute;left:50%;width:2px;height:10px;background: #000;
+	transform-origin:1px 150px;}
+#clock strong{position: absolute;left:50%;top:13px;margin-left:-8px;width:16px;text-align:center;font-weight:normal;}
+</style>	
+<script>
+window.onload=function(){
+	var oDiv=document.getElementById('clock');
+	var oHour=oDiv.querySelector(".hour");
+	var oMin=oDiv.querySelector(".min");
+	var oSec=oDiv.querySelector(".sec");
+	for(var i=0;i<60;i++){
+		var oSpan=document.createElement("span");
+		setStyle3(oSpan,"transform","rotate("+i*6+"deg)");
+		if(i%5==0){
+			oSpan.style.height="16px";
+			oSpan.innerHTML="<strong>"+(i==0?12:i/5)+"</strong>";
+			setStyle3(oSpan.children[0],"transform","rotate("+i*-6+"deg)")
+		}
+		oDiv.appendChild(oSpan);
+	}
+	function clock(){
+		var date=new Date();
+		var t=date.getTime();
+		var hour=date.getHours();
+		var minute=date.getMinutes();
+		var second=date.getSeconds();
+		var millisecond=date.getMilliseconds();
+		console.log(hour,minute,second)
+		//30=360/12刻度  6=360/60;
+		setStyle3(oHour,"transform","rotate("+(hour*30+minute/60*12)+"deg)");
+		setStyle3(oMin,"transform","rotate("+(minute*6+second/60*6)+"deg)");
+		setStyle3(oSec,"transform","rotate("+(second*6+millisecond/1000*6)+"deg)");
+	}
+	clock();
+	setInterval(clock,100)
+}
+function setStyle3(obj,name,value){
+	var str=name.charAt(0).toUpperCase()+name.substring(1);
+	//var str=name.replace(name.charAt(0),function(s){s.toUpperCase()})
+	console.log(value)
+	obj.style["Webkit"+str]=value;
+	obj.style["Moz"+str]=value;
+	obj.style["ms"+str]=value;
+	obj.style["O"+str]=value;
+	obj.style[name]=value;
+
+}	
+</script>
+</head>
+<body>
+	<div id="clock">
+		<div class="hour"></div>
+		<div class="min"></div>
+		<div class="sec"></div>
+		<div class="cap"></div>
+	</div>
+</body>
+</html>

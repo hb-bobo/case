@@ -1,0 +1,56 @@
+/* 
+字体图标
+ */
+@font-face {font-family: "iconfont";
+  src: url('../fonts/iconfont.eot?t=1464764585'); /* IE9*/
+  src:url('../fonts/iconfont.woff?t=1464764585') format('woff'), /* chrome, firefox */
+  url('../fonts/iconfont.ttf?t=1464764585') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../fonts/iconfont.svg?t=1464764585#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:.35rem;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width:0.2px;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff; 
+}
+.icon-sousuo:before { content: "\e612";font-size: .36rem;display: inline-block;width: 0.6rem;height: 0.6rem}
+.icon-wode:before { content: "\e609";color: #3DCD58;}
+.icon-caidan:before { content: "\343c";display: inline-block;width: 0.6rem;height: 0.6rem }
+.icon-shangxia:before { content: "\e61f";font-size: .30rem;}
+/* 宽度 */
+.wrap{min-width: 300px;max-width: 750px;margin:0 auto;}
+.w{-max-width:600px;padding: .2rem;}
+/* color */
+.color-white{color:#fff;}
+.color-black{color:#000;}
+.color-green{color:#3DCD58;}
+.color-yellow{color:#E47F00;}
+.color-red{color: #FF6767}
+.muted{color: #999999;}
+.bg-white{background: #fff;}
+.bg-gray{background:#F2F2F2;}
+/* 清楚浮动 */
+.fl{float:left;}
+.fr{float:right;}
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+/*flex布局*/
+.container{display: flex;display: -webkit-flex;display: -webkit-box;flex-wrap:nowrap;-webkit-align-items: center;-webkit-box-align: center;align-items: center;align-content:center;-webkit-align-content:center;flex-direction: row}
+.f1{flex: 1;-webkit-box-flex: 1;-webkit-flex: 1;   }
+.f2{flex: 2;-webkit-box-flex: 2;-webkit-flex: 2;   }
+.f3{flex: 3;-webkit-box-flex: 3;-webkit-flex: 3;   }
+.f8{flex: 8;-webkit-box-flex: 8;-webkit-flex: 8;   }
+/* 百分比布局 */
+.full-w{width: 100%;overflow: hidden;}
+.full-12{width: 100%}
+.full-8{width: 66.66%}
+.full-6{width: 50%}
+.full-4{width: 33.33%}
+.full-3{width: 25%}
+/* 文字居中 */
+.text-left{text-align: left}
+.text-center{text-align: center}
+.text-right{text-align:right}

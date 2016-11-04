@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+div{width: 200px;height: 200px;background: #CCC;margin:100px auto;}	
+body{background: #000}
+*{padding: 0;margin: 0px;}
+ul{position:relative;list-style: none;margin:200px auto;width: 480px;height: 260px;}
+li{position: absolute;left: 0;top:0px;opacity: 0;
+	transform:perspective(800px) rotateY(0);
+	transition: 1s all ease}
+li.l2{opacity: 0;z-index: 1;transform: perspective(800px) translate(-300px) rotateY(45deg)}
+li.l1{opacity:1;z-index: 3;transform: perspective(800px) translate(-200px) rotateY(45deg)}
+li.cur{opacity:1;z-index: 5;transform: scale(1.1,1.2);}
+li.r1{opacity:1;z-index: 3;transform: perspective(800px) translate(200px) rotateY(-45deg)}
+li.r2{z-index: 3;transform: perspective(800px) translate(300px) rotateY(-45deg)}
+img{width: 460px;height: 260px;}
+</style>
+<script>
+window.onload=function(){
+	var oUl=document.getElementById("ul");
+	var oNext=document.getElementById("next");
+	var oPrev=document.getElementById("prev");
+	var aLi=oUl.children;
+	var aClass=[];
+	var ready=true;
+	for (var i = 0; i < aLi.length; i++) {
+		aClass.push(aLi[i].className);
+	}
+	oNext.onclick=function(){
+		
+		if(ready){
+			aClass.unshift(aClass.pop())
+			tab();
+		}
+		ready=false;
+	}
+	oPrev.onclick=function(){
+		if(!ready) return;
+		ready=false;
+		aClass.push(aClass.shift())
+		tab();
+	}
+	function tab(){
+		for (var i = 0; i < aClass.length; i++) {
+			aLi[i].className=aClass[i];
+		}
+		var oCur=document.querySelector("#ul .cur");
+		oCur.addEventListener("transitionend",function(){
+			ready=true
+		},false)
+	}
+}	
+</script>	
+</head>
+<body>
+<input id="prev" type="button" value="上一张"/>
+<input id="next" type="button" value="下一张"/>
+	<ul id="ul">
+		<li class="l2"><img src="img/1.png" alt=""></li>
+		<li class="l1"><img src="img/2.png" alt=""></li>
+		<li class="cur"><img src="img/3.png" alt=""></li>
+		<li class="r1"><img src="img/2.png" alt=""></li>
+		<li class="r2"><img src="img/3.png" alt=""></li>
+		<li><img src="img/4.png" alt=""></li>
+		<li><img src="img/5.png" alt=""></li>
+		<li><img src="img/1.png" alt=""></li>
+		<li><img src="img/2.png" alt=""></li>
+		<li><img src="img/3.png" alt=""></li>
+		<li><img src="img/4.png" alt=""></li>
+		<li><img src="img/5.png" alt=""></li>
+	</ul>
+</body>
+</html>

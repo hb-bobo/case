@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+	<meta name="renderer" content="webkit" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no,email=no" />
+	<title>施耐德电气</title>
+	<link rel="stylesheet" type="text/css" href="css/base.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/app.css" />
+	<link rel="stylesheet" type="text/css" href="css/common.css" />
+</head>
+<style>
+html{font-size: 100px;}
+body{font-size: 16px;}
+</style>
+<script src="js/zepto.js"></script>
+<script src="js/touch.js"></script>
+
+<body>
+	<div class="wrap">
+		<!-- top为固定 -->
+		<div id="top" class="top">
+			<div class="head">
+				<!-- 顶部 -->
+				<div class="w container head-title">
+					<div id="btn-menu" class="f1">
+						<div class="iconfont icon-caidan text-left"></div>
+					</div>
+					<div class="title color-white text-center f3">
+						<h1>我的待办</h1>
+					</div>
+					<div id="btn-seach" class="f1">
+						<div class="icon-sousuo iconfont text-right"></div>
+					</div>
+				</div>
+				<div class="clearfix bg-white user">
+					<div class="logo fl">
+						<img src="img/logo-sm.png" alt="" style="width:1.26rem ;height: 0.53rem">
+					</div>
+					<div class="iconfont fr icon-wode text-right">
+						<span class="my-name color-black">你好，任帅</span>
+					</div>
+				</div>
+				<div class="row-space"></div>
+				<!-- 排序 -->
+				<div id="order" class="w tab clearfix bg-white">
+					<a class="pre-bidding order1 fl text-left active" href="javascript:;">
+						<span>Pre-Bidding</span>
+						<i class="iconfont icon-shangxia muted act"></i>
+					</a>
+					<a class="pre-bidding order2 fl text-left color-ok" href="javascript:;">
+						<span>Pre-Order</span>
+						<i class="iconfont icon-shangxia muted"></i>
+					</a>
+					<a class="pre-bidding order3 fl text-left muted" href="javascript:;">
+						<span>Order</span>
+						<i class="iconfont icon-shangxia muted"></i>
+					</a>	
+				</div>				
+			</div>
+			<!-- 搜索部分 -->
+			<div id="seach">
+				<div class="seach-main">
+					<div class="seach-top">
+						<a id="seach-back" href="javascript:;"></a><span class="text-center">查询</span>
+					</div>
+					<div class="seach-option">
+						<div class="item special">
+							<div class="fl">申请编号</div>
+							<div class="fr iconfont icon-youjiantou">请选择编号<i class="icon-arrow"></i></div>
+						</div>
+						<div class="item">
+							<div class="fl">OPP机会名称</div>
+							<div class="fr iconfont icon-youjiantou">请选择OPP机会名称<i class="icon-arrow"></i></div>
+						</div>
+						<div class="item">
+							<div class="fl">申请人</div>
+							<div class="fr iconfont icon-youjiantou">请选择申请人<i class="icon-arrow"></i></div>
+						</div>
+						<div class="item">
+							<div class="fl">创建开始事件</div>
+							<div class="fr iconfont icon-youjiantou">请选择创建开始事件<i class="icon-arrow"></i></div>
+						</div>
+						<div class="item">
+							<div class="fl">创建结束时间</div>
+							<div class="fr iconfont icon-youjiantou">请选择创建结束时间<i class="icon-arrow"></i></div>
+						</div>
+					</div>
+					<div class="input">
+						<input id="confirm" class="fl" type="button" value="确认查询">
+						<input id="cancel" class="fr" type="button" value="取消查询">
+					</div>				
+				</div>
+			</div>
+			<!--菜单 -->
+			<div id="menu">
+				<div class="menu-main">
+					<div class="full-12 color-white text-center">我的待办</div>
+					<div class="full-12 color-white text-center">我的已办</div>
+					<div id="setting" class="full-12 color-white text-center">设置</div>
+				</div>
+				<div class="munu-blank"></div>
+			</div>
+		</div>	
+		<div id="order-item">					
+			<div class="order-item active">
+				<div class="w item">
+					<div class="full-w number">
+						<div class="full-8 fl text-left">
+							<p>申请编号：<span>B00000000048458-A5</span></p>
+						</div>
+						<div class="full-4 fl text-right">
+							<a class="more" href="pblist.html">查看详情>></a>
+						</div>
+					</div>
+					<div class="order-content">
+						<div class="full-w">
+							<div class="left text-left" >
+								<p style="letter-spacing: .1rem">申请金额：<span style="letter-spacing: .01rem">2191.1</span></p>
+							</div>
+							<div class="right text-left">
+								<p>创建时间：<span>2016-06-2</span></p>
+							</div>
+						</div>
+						<div class="full-w">
+							<div class="left text-left">
+								<p>特别申请类别：<span>项目机会特价</span></p>
+							</div>
+							<div class="right text-left" >
+								<p style="letter-spacing: .05rem">申请人：<span>任帅</span></p>
+							</div>
+						</div>
+						<div class="full-w">
+							<p class="fl">OPP机会名称：<span>prebidding1.2-fejfi</span></p>
+						</div>
+					</div>
+				</div>
+				<div class="w item">
+					<div class="full-w number">
+						<div class="full-8 fl text-left">
+							<p class="icon-time">申请编号：<span>B00000000048458-A5</span></p>
+						</div>
+						<div class="full-4 fl text-right">
+							<a class="more" href="pblist.html">查看详情>></a>
+						</div>
+					</div>
+					<div class="order-content">
+						<div class="full-w">
+							<div class="left text-left" >
+								<p style="letter-spacing: .1rem">申请金额：<span style="letter-spacing: .01rem">2191.1</span></p>
+							</div>
+							<div class="right text-left">
+								<p>创建时间：<span>2016-06-2</span></p>
+							</div>
+						</div>
+						<div class="full-w">
+							<div class="left text-left">
+								<p>特别申请类别：<span>项目机会特价</span></p>
+							</div>
+							<div class="right text-left" >
+								<p style="letter-spacing: .05rem">申请人：<span>任帅</span></p>
+							</div>
+						</div>
+						<div class="full-w">
+								<p class="fl">OPP机会名称：<span>prebidding1.2-fejfi</span></p>
+						</div>
+					</div>
+				</div>
+				<div class="w item">
+					<div class="full-w number">
+						<div class="full-8 fl text-left">
+							<p>申请编号：<span>B00000000048458-A5</span></p>
+						</div>
+						<div class="full-4 fl text-right">
+							<a class="more" href="pblist.html">查看详情>></a>
+						</div>
+					</div>
+					<div class="order-content">
+						<div class="full-w">
+							<div class="left text-left" >
+								<p style="letter-spacing: .1rem">申请金额：<span style="letter-spacing: .01rem">2191.1</span></p>
+							</div>
+							<div class="right text-left">
+								<p>创建时间：<span>2016-06-2</span></p>
+							</div>
+						</div>
+						<div class="full-w">
+							<div class="left text-left">
+								<p>特别申请类别：<span>项目机会特价</span></p>
+							</div>
+							<div class="right text-left" >
+								<p style="letter-spacing: .05rem">申请人：<span>任帅</span></p>
+							</div>
+						</div>
+						<div class="full-w">
+							<p class="fl">OPP机会名称：<span>prebidding1.2-fejfi</span></p>
+						</div>
+					</div>
+				</div>
+								<div class="w item">
+					<div class="full-w number">
+						<div class="full-8 fl text-left">
+							<p>申请编号：<span>B00000000048458-A5</span></p>
+						</div>
+						<div class="full-4 fl text-right">
+							<a class="more" href="pblist.html">查看详情>></a>
+						</div>
+					</div>
+					<div class="order-content">
+						<div class="full-w">
+							<div class="left text-left" >
+								<p style="letter-spacing: .1rem">申请金额：<span style="letter-spacing: .01rem">2191.1</span></p>
+							</div>
+							<div class="right text-left">
+								<p>创建时间：<span>2016-06-2</span></p>
+							</div>
+						</div>
+						<div class="full-w">
+							<div class="left text-left">
+								<p>特别申请类别：<span>项目机会特价</span></p>
+							</div>
+							<div class="right text-left" >
+								<p style="letter-spacing: .05rem">申请人：<span>任帅</span></p>
+							</div>
+						</div>
+						<div class="full-w">
+							<p class="fl">OPP机会名称：<span>prebidding1.2-fejfi</span></p>
+						</div>
+					</div>
+				</div>
+								<div class="w item">
+					<div class="full-w number">
+						<div class="full-8 fl text-left">
+							<p>申请编号：<span>B00000000048458-A5</span></p>
+						</div>
+						<div class="full-4 fl text-right">
+							<a class="more" href="pblist.html">查看详情>></a>
+						</div>
+					</div>
+					<div class="order-content">
+						<div class="full-w">
+							<div class="left text-left" >
+								<p style="letter-spacing: .1rem">申请金额：<span style="letter-spacing: .01rem">2191.1</span></p>
+							</div>
+							<div class="right text-left">
+								<p>创建时间：<span>2016-06-2</span></p>
+							</div>
+						</div>
+						<div class="full-w">
+							<div class="left text-left">
+								<p>特别申请类别：<span>项目机会特价</span></p>
+							</div>
+							<div class="right text-left" >
+								<p style="letter-spacing: .05rem">申请人：<span>任帅</span></p>
+							</div>
+						</div>
+						<div class="full-w">
+							<p class="fl">OPP机会名称：<span>prebidding1.2-fejfi</span></p>
+						</div>
+					</div>
+				</div>
+								<div class="w item">
+					<div class="full-w number">
+						<div class="full-8 fl text-left">
+							<p>申请编号：<span>B00000000048458-A5</span></p>
+						</div>
+						<div class="full-4 fl text-right">
+							<a class="more" href="pblist.html">查看详情>></a>
+						</div>
+					</div>
+					<div class="order-content">
+						<div class="full-w">
+							<div class="left text-left" >
+								<p style="letter-spacing: .1rem">申请金额：<span style="letter-spacing: .01rem">2191.1</span></p>
+							</div>
+							<div class="right text-left">
+								<p>创建时间：<span>2016-06-2</span></p>
+							</div>
+						</div>
+						<div class="full-w">
+							<div class="left text-left">
+								<p>特别申请类别：<span>项目机会特价</span></p>
+							</div>
+							<div class="right text-left" >
+								<p style="letter-spacing: .05rem">申请人：<span>任帅</span></p>
+							</div>
+						</div>
+						<div class="full-w">
+							<p class="fl">OPP机会名称：<span>prebidding1.2-fejfi</span></p>
+						</div>
+					</div>
+				</div>				
+			</div>
+			<div class="order-item">
+				<div class="w item">
+					<div class="full-w number">
+						<div class="full-8 fl text-left">
+							<p>申请编号：<span>B00000000048458-A5</span></p>
+						</div>
+						<div class="full-4 fl text-right">
+							<a class="more" href="pblist.html">查看详情>></a>
+						</div>
+					</div>
+					<div class="order-content">
+						<div class="full-w">
+							<div class="left fl text-left" >
+								<p style="letter-spacing: .1rem">申请金额：<span style="letter-spacing: .01rem">2191.1</span></p>
+							</div>
+							<div class="right fl text-left">
+								<p>创建时间：<span>2016-06-2</span></p>
+							</div>
+						</div>
+						<div class="full-w">
+							<div class="left fl text-left">
+								<p>特别申请类别：<span>项目机会特价</span></p>
+							</div>
+							<div class="right fl text-left" >
+								<p style="letter-spacing: .05rem">申请人：<span>任帅</span></p>
+							</div>
+						</div>
+						<div class="full-w">
+							<p class="fl">OPP机会名称：<span>prebidding1.2-fejfi</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="order-item">
+				<div class="w item">
+					<div class="full-w number">
+						<div class="full-8 fl text-left">
+							<p>申请编号3：<span>B00000000048458-A5</span></p>
+						</div>
+						<div class="full-4 fl text-right">
+							<a class="more" href="pblist.html">查看详情>></a>
+						</div>
+					</div>
+					<div class="order-content">
+						<div class="full-w">
+							<div class="left fl text-left" >
+								<p style="letter-spacing: .1rem">申请金额：<span style="letter-spacing: .01rem">2191.1</span></p>
+							</div>
+							<div class="right fl text-left">
+								<p>创建时间：<span>2016-06-2</span></p>
+							</div>
+						</div>
+						<div class="full-w">
+							<div class="left fl text-left">
+								<p>特别申请类别：<span>项目机会特价</span></p>
+							</div>
+							<div class="right fl text-left" >
+								<p style="letter-spacing: .05rem">申请人：<span>任帅</span></p>
+							</div>
+						</div>
+						<div class="full-w">
+							<p class="fl">OPP机会名称：<span>prebidding1.2-fejfi</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<script src="js/index.js"></script>
+</body>
+</html>

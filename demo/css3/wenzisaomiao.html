@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+	body{background: #000;}
+	span{color: rgba(255,255,255,0);font-size: 30px;text-shadow:0 0 100px #fff;opacity: 0;display:inline-block;line-height: 30px;
+		transition:0.3s all ease;}
+	span.active{text-shadow:0 0 0px #fff;opacity: 1;}
+	span:hover{transform:scale(2);}
+</style>	
+<script>
+	window.onload=function(){
+		var str="京东JD.COM-专业的综合网上购物商城,销售家电、数码通讯、电脑、家居百货、服装服饰、母婴、图书、食品等数万个品牌优质商品.便捷、诚信的服务，为您提供愉悦的网上购物体验!京东JD.COM-专业的综合网上购物商城,销售家电、数码通讯、电脑、家居百货、服装服饰、母婴、图书、食品等数万个品牌优质商品.便捷、诚信的服务，为您提供愉悦的网上购物体验!";
+		for(var i=0,len=str.length;i<len;i++){
+			var oSpan=document.createElement("span");
+			oSpan.innerHTML=str[i];
+			document.body.appendChild(oSpan);
+		}
+		var i=0;
+		var aSpan=document.getElementsByTagName('span');
+		var timer=setInterval(function(){
+			i++;
+			aSpan[i].className="active";
+			if(i==str.length-1){
+				clearInterval(timer);
+			}
+		},30);
+
+	}
+
+	
+</script>
+</head>
+
+<body>
+
+
+</body>
+</html>

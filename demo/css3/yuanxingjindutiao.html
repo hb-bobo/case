@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+body{background: #000}	
+#can{background: #fff}
+</style>	
+<script>
+window.onload=function(){
+	var oCan=document.getElementById("can");
+	var gd=oCan.getContext("2d");
+	var cx=200;
+	var cy=200;
+	var r=100;
+	var d=0;
+	gd.lineWidth="15";
+	var h=60;
+	gd.font=h+"px kaiti";
+	gd.fillStyle="red";
+
+	var timer=setInterval(function(){
+		gd.clearRect(0,0,oCan.width,oCan.height);
+		gd.beginPath();
+		gd.arc(cx,cy,r,0,d2a(d++),false);
+		gd.strokeStyle="rgba("+255*d/360+",0,0,1)";
+		gd.stroke();
+		var str=Math.floor(d/360*100)+"%";
+		var w=gd.measureText(str).width;
+		gd.fillText(str,cx-w/2,cy+h/2);
+		if(d>360){
+			clearInterval(timer);
+		}
+	},16)
+	function d2a(n){
+		return n*Math.PI/180;
+	}
+}	
+</script>
+</head>
+<body>
+	<canvas id="can" width="800" height="600"></canvas>
+</body>
+</html>

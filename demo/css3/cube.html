@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>立方体</title>
+<style type="text/css">
+#div1{width: 200px;height: 200px;margin:100px auto;position: relative;
+	transform: perspective(800px) rotateX(0deg) rotateY(0deg) ;
+	transform-style: preserve-3d;}
+#div1 div{width: 200px;height: 200px;position: absolute;background: blue;font-size: 20px;color: #fff;text-align:center;line-height:200px;}
+#div1 .fornt{transform: translateZ(100px);background:#009966 }
+#div1 .back{transform: translateZ(-100px);background:#339933 }
+#div1 .left{transform: rotateY(-90deg) translateZ(100px);background:#663366 }
+#div1 .right{transform: rotateY(90deg) translateZ(100px);background:#993333 }
+#div1 .top{transform: rotateX(90deg) translateZ(100px);background:#CC0066  }
+#div1 .bottom{transform: rotateX(-90deg) translateZ(100px);background:#CC99CC }
+/* #div1:active{transform: perspective(800px) rotateX(30deg) rotateY(360deg);}	 */	
+</style>
+<script>
+window.onload=function(){
+	var oDiv=document.getElementById('div1');
+	var l=0,t=0,r=0,b=0;
+	var x=0,y=0;
+	var speedX=0;
+	var speedY=0;
+	var lastX=0;
+	var lastY=0;
+	document.onmousedown=function(ev){
+		//clearInterval(oDiv.timer)
+		var oEvt=ev||event;
+		var disX=oEvt.clientX-y;
+		var disY=oEvt.clientY-x;		
+		document.onmousemove=function(ev){
+			var oEvt=ev||event;
+			y=oEvt.clientX-disX;
+			x=oEvt.clientY-disY;
+
+			oDiv.style.transform="perspective(800px) rotateX("+-x+"deg) rotateY("+y+"deg)";
+			speedX=x-lastX;
+			speedY=y-lastY;
+			lastX=x;
+			lastY=y;
+		}
+		document.onmouseup=function(){
+			document.onmousemove=document.onmouseup=null;
+			buffer()
+
+		}
+		return false;
+	}
+	function buffer(){
+		oDiv.timer=setInterval(function(){
+			x=x+speedX;
+			y=y+speedY;
+			speedX*=0.95;
+			speedY*=0.95;
+			if(Math.abs(speedX)<1){
+				speedX = 0;
+			}
+			if(Math.abs(speedY)<1){
+				speedY = 0;
+			}
+			
+			if(speedX == 0 && speedY == 0){
+				clearInterval(oDiv.timer);
+			}
+			document.title = speedX;
+			oDiv.style.transform="perspective(800px) rotateX("+-x+"deg) rotateY("+y+"deg)";
+		},50)
+	}
+	document.onkeydown=function(ev){
+		var oEvt=ev||event;
+		switch(oEvt.keyCode){
+            //键盘←键
+            case 37:l=true;break;
+            //键盘→键
+            case 39:r=true;break;
+            case 38:t=true;break;
+            case 40:b=true;break;
+        }
+	}
+	document.onkeyup=function(ev){
+		var oEvt=ev||event;
+		switch(oEvt.keyCode){
+            //键盘←键
+            case 37:l=false;break;
+            //键盘→键
+            case 39:r=false;break;
+            case 38:t=false;break;
+            case 40:b=false;break;
+        }
+	}
+	/*setInterval(function(){
+		if(l){
+			y-=10;
+		}
+		if(r){
+			y+=10;
+		}
+		if(t){
+			x+=10;
+		}
+		if(b){
+			x-=10;
+		}
+		oDiv.style.transform="perspective(800px) rotateX("+x+"deg) rotateY("+y+"deg)";
+	},50)*/
+}	
+</script>	
+</head>
+<body>
+	<div id="div1">
+		<div class="fornt">前</div>
+		<div class="back">后</div>
+		<div class="left">左</div>
+		<div class="right">右</div>
+		<div class="top">上</div>
+		<div class="bottom">下</div>
+	</div>	
+</body>
+</html>

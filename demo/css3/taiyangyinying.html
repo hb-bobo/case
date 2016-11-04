@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style type="text/css">
+	#sun{width:50px;height:50px;border-radius:50%;background: red;position: absolute;left:0;top:0;}
+	#div1{border-radius: 10px;text-align: center;width:100px;height: 60px;font-size: 40px;line-height: 60px;position:absolute;left:50%;top:50%;margin-left:-50px;margin-right: -30px;}
+</style>
+<script>
+	window.onload=function(){
+		var oSun=document.getElementById('sun');
+		var oDiv=document.getElementById("div1");
+		document.onmousemove=function(ev){
+			oSun.style.left=ev.clientX-oSun.offsetWidth/2+"px";
+			oSun.style.top=ev.clientY-oSun.offsetHeight/2+"px";
+			var x1=ev.clientX;
+			var y1=ev.clientY;
+			var x2=oDiv.offsetLeft+oDiv.offsetWidth/2;
+			var y2=oDiv.offsetTop+oDiv.offsetHeight/2;
+			var x=(x2-x1)/3;
+			var y=(y2-y1)/3;
+			var blur=Math.sqrt(x*x+y*y);
+			oDiv.style.textShadow=x+"px "+y+"px "+blur/20+"px #000";
+		}
+	}
+</script>	
+</head>
+<body>
+	<div id="sun"></div>
+	<div id="div1">胡波</div>
+</body>
+</html>

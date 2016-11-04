@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+ul,li{margin: 0px;padding:0px;}
+#div1{width:600px;height:400px;margin: 50px auto;border:1px solid red;position: relative;}
+#div1 ul{list-style: none;width:9999px;position: absolute;top:50%;margin-top:-100px;left: 0}
+#div1 ul li{float:left;width: 300px;height: 200px;border: 1px solid red;position: relative;}
+#div1 ul li img{width: 300px;height: 200px;/*position: absolute;left: 0px;*/ }
+#div1 ul li span{font-size:30px;color:#000; background:#fff; position:absolute;left:48%;top:48%;}
+</style>
+<script>
+window.onload=function(){
+	var oDiv=document.getElementById("div1");
+	var oUl=oDiv.children[0];
+	var aLi=oUl.children;
+	var aImg=document.getElementsByTagName('img');
+	var aSpan=document.getElementsByTagName('span');
+	var oH=document.getElementById('h');
+	oUl.style.width=aLi[0].offsetWidth*aLi.length+"px";
+    
+	oUl.onmousedown=function(ev){
+		var oEvt=ev||event;
+		var disX=oEvt.clientX-oUl.offsetLeft;
+        document.onmousemove=function(ev){
+        	var oEvt=ev||event;
+        	var l=oEvt.clientX-disX;
+        	if(l>(oDiv.offsetWidth/2-aLi[0].offsetWidth/2)){l=oDiv.offsetWidth/2-aLi[0].offsetWidth/2}
+        	if(l<oDiv.offsetWidth/2-(aLi.length-1+0.5)*aLi[0].offsetWidth){
+        		l=oDiv.offsetWidth/2-(aLi.length-1+0.5)*aLi[0].offoffsetWidth;
+        	}
+        	oUl.style.left=l+"px";
+        	setSize();
+        	
+        }
+        document.onmouseup=function(){
+        	document.onmousemove=null;
+        	document.onmouseup=null;
+        }
+        return false;
+	}
+	function setSize(){
+		for(var i=0;i<aImg.length;i++){
+        		
+    	   var dis=Math.abs(oDiv.offsetWidth/2-(oUl.offsetLeft+aLi[i].offsetLeft+aLi[i].offsetWidth/2));
+    	   var ratio=1-dis/800;
+    	   if(ratio<=0.5) ratio=0.5;
+    	   aSpan[i].innerHTML=ratio.toFixed(2);
+    	   aImg[i].style.width=ratio*500+"px";
+    	   aImg[i].style.height=ratio*300+"px";
+    	   aImg[i].style.marginLeft=-(aImg[i].offsetWidth-aLi[i].offsetWidth)/2+"px";
+    	   aImg[i].style.marginTop=-(aImg[i].offsetHeight-aLi[i].offsetHeight)/2+"px";
+    	   aLi[i].style.zIndex=parseInt(ratio*10);
+    	   aLi[i].style.opacity=ratio;
+        }
+	}
+	show(1);
+	function show(n){
+       oUl.style.left=oDiv.offsetWidth/2-(n+0.5)*aLi[0].offsetWidth+"px";
+	}
+	setSize();
+}
+	
+</script>	
+</head>
+<body>
+	<div id="div1">
+		<ul>
+			<li><img src="img3/0.jpg"><span>0</span></li>
+			<li><img src="img3/1.jpg"><span>0</span></li>
+			<li><img src="img3/2.jpg"><span>0</span></li>
+			<li><img src="img3/3.jpg"><span>0</span></li>
+			<li><img src="img3/4.jpg"><span>0</span></li>
+			<li><img src="img3/5.jpg"><span>0</span></li>
+			<li><img src="img3/6.jpg"><span>0</span></li>
+			<li><img src="img3/7.jpg"><span>0</span></li>
+		</ul>
+	</div>
+	<h1 id="h"></h1>
+</body>
+</html>

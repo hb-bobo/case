@@ -1,0 +1,33 @@
+@charset "utf-8";
+.login{max-width: 750px;margin: 0 auto;padding: 60px 0 0 0;}
+.logo{text-align: center;}
+.logo img{width: 180px;}
+.login h1{font:normal 26px/2.5 "方正黑体简体","微软雅黑",arial;text-align: center;}
+.login-main{width: 90%;margin: 0 auto;}
+.account-pass{border: 1px solid #ccc;width: 100%;padding: 5px 10px;background: #fff;border-radius: 3px;}
+.account-pass .account-div{background: url(../img/account.png) no-repeat center left;background-size:16px;border-bottom: 1px solid #ccc ;}
+.account-pass .pass-div{background: url(../img/password.png) no-repeat center left;background-size:16px;}
+.account-pass>div input{font:normal 16px "方正黑体简体","微软雅黑",arial;margin-left: 20px;padding:10px;width: 80%;}
+.remember-account{color: #1c549f;}
+/*登录按钮*/
+.login-btn{width: 100%;padding: 20px 0 0 0;}
+.login-btn input{
+	width: 100%;padding: 12px 0;font:normal 18px "方正黑体简体","微软雅黑",arial;
+	border-radius: 3px;
+	word-spacing:15px;
+	}
+.btn-info1 {
+  color: #fff;
+  background-color: #1c549f;
+}
+.btn-info1:hover,
+.btn-info1:focus,
+.btn-info1:active,
+.btn-info1.active{
+  color: #fff;
+  background-color: #144b95;
+}
+.btn-info1:active,
+.btn-info1.active{
+  background-image: none;
+}

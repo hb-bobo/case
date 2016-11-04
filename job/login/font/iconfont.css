@@ -1,0 +1,28 @@
+
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1465310373'); /* IE9*/
+  src: url('iconfont.eot?t=1465310373#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1465310373') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1465310373') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1465310373#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:28px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-user-select:none;/*火狐*/
+  -webkit-user-select:none;/*webkit浏览器*/
+  -ms-user-select:none;/*IE10*/
+  -khtml-user-select:none;/*早期浏览器*/
+  user-select:none;
+}
+.icon-saoyisao{ content: "\e600";font-size: 24px;color:#0099FF ;line-height: 24px;}
+.icon-yonghu { content: "\e601"; margin-top:10px;display: inline-block;color: #fff;line-height: 28px;}
+.icon-erweima { content: "\e605";font-size: 52px; cursor: pointer;color: #000;line-height: 52px;}
+.icon-iconfontsuo1 { content: "\e602";margin-top:12px;display: inline-block;color: #fff;line-height: 28px;}
+.icon-diannao { content: "\e603";font-size: 52px; cursor: pointer;color: #000;line-height: 52px;}
+.icon-x { content: "\e604";}

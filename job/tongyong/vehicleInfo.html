@@ -1,0 +1,349 @@
+﻿<!DOCTYPE html>
+<html style="overflow-y:hidden; ">
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+	<meta name="renderer" content="webkit" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no,email=no" />
+	<title>车辆信息</title>
+	<link rel="stylesheet" type="text/css" href="css/base.min.css" />	
+	<link rel="stylesheet" type="text/css" href="css/common.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/rem.js"></script>
+<style>
+	html{font-size: 100px;background: #eaeaea;}
+	body{font-size: .18rem;height:100%;}
+	#next{margin-bottom: 1rem;}
+	.w{padding:0 .37rem;}
+	.icon-xia{z-index: 0;}
+</style>
+</head>
+<body>
+	<div class="wrap">
+	<!-- 轮播图开始 -->
+		<div id="focus">
+			<div class="slider">
+				<ul class="slider-main">
+					<li>
+						<a href="javascript:;">
+							<img src="img/focus-img1.png" alt="">
+						</a>
+					</li>
+					<!-- <li>
+						<a href="javascript:;">
+							<img src="img/focus-img2.png" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="img/focus-img3.png" alt="">
+						</a>
+					</li> -->
+				</ul>
+				<div class="slider-extra">
+					<!-- <div class="slider-nav text-center">
+						<span class="act"></span>
+						<span class=""></span>
+						<span class=""></span>
+					</div> -->
+				</div>
+			</div>
+		</div>
+	<!-- 轮播图开始 -->
+	<div class="form">
+		<form action="javascript:;" id="oForm">
+			<div class="form-group">
+				<div class="form-item w">
+					<i class="iconfont icon-xunche"></i>
+					<input class="mustInput" id="vinNum" type="text" placeholder="您的VIN号(必填)" maxlength="17" />
+					<div class="input-remind">
+						<span>此项不能为空</span>
+					</div>
+				</div>
+				<div class="form-explain">
+					<p>VIN号位于挡风玻璃的左下方或可在行驶证中查到</p>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="form-item w">
+					<i class="iconfont icon-26yibiaopan"></i>
+					<input class="mustInput" id="mileage" type="text" placeholder="您已经行驶的里程(必填)" />
+					<div class="input-remind">
+						<span>此项不能为空</span>
+					</div>
+				</div>
+				<div class="form-explain">
+					<p>行驶里程可在仪表盘中查看</p>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="form-item w">
+					<i class="iconfont icon-11"></i>
+					<input id="plateNumber" class="mustInput" type="text" placeholder="您的车牌号(必填)" />
+					<div class="input-remind">
+						<span>此项不能为空</span>
+					</div>
+				</div>
+				<div class="form-explain">
+					<p>请输入车牌号</p>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="form-item w photo">
+					<i class="iconfont icon-11" style="position: absolute;top: 0rem;left: 0.37rem;"></i>
+                    <div class="photo-list">
+    					<input id="plateNumberImg" name="licensePicName" type="text" placeholder="您的车牌号的照片(选填)" readonly="readonly"/>
+                    </div>
+					<input id="file-plate-number" name="img" type="file" class="hide" />      
+					<label id="upLodaBtn" for="file-plate-number" class="iconfont icon-iconfontjia"></label>
+				</div>
+				<div class="form-explain">
+					<p>图片只可上传一张</p>
+				</div>
+                <!-- 编辑图片 -->
+                <div class="swipeUp-modal modal">
+                    <div class="modal-content">
+                         <div class="modal-body w">
+                             <ul>
+                                 <li id="show-img">查看大图</li>
+                                 <li id="delel-img"><span class="color-red">删除照片</span></li>
+                             </ul>
+                         </div>
+                         <div id="close-modal" class="modal-footer">
+                             <span>取消</span>
+                         </div>
+                     </div>   
+                </div>
+                <!-- 编辑图片结束 -->
+                <!-- 图片查看 -->
+                <div class="showImg-modal modal">
+                    <div class="modal-content" style="display: none">
+                         
+                    </div> 
+                    <div class="show-box flex-container">
+                        <div class="f1 text-center">
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- 图片查看结束 -->
+			</div>
+			<div class="form-group">
+				<div class="form-item w">
+					<i class="iconfont icon-shijian"></i>
+					<input id="starDate" type="text" placeholder="您开始使用的日期(可选)"/>
+					<label for="starDate" class="iconfont icon-xia"></label>
+					
+				</div>
+				<div class="form-explain">
+					<p>请选择开始使用的日期</p>
+				</div>
+			</div>
+			<div id="next" class="text-center">
+				<input type="submit" class="btn btn-next" value="下一步" />
+			</div>
+		</form>
+	</div>
+	</div>
+	<script src="js/index.js"></script> 
+	<script src="plugins/upLoad/js/lrz.bundle.js"></script>
+
+	<link rel="stylesheet" href="plugins/mobiscroll/css/mobiscroll.2.13.2.css">
+	<script src="plugins/mobiscroll/js/mobiscroll.2.13.2.js"></script>		
+	<script>
+		
+
+        $("#starDate").mobiscroll().date({  
+	        theme: "android-ics light",  
+	        lang: "zh",
+	        width:170,  
+	        cancelText: "取消",  
+	        dateFormat: 'yy-mm', //返回结果格式化为年月格式  
+	        // wheels:[], 设置此属性可以只显示年月，此处演示，就用下面的onBeforeShow方法,另外也可以用treelist去实现  
+	        onBeforeShow: function (inst) { inst.settings.wheels[0].length>2?inst.settings.wheels[0].pop():null; }, //弹掉“日”滚轮  
+	        headerText: function (valueText) { //自定义弹出框头部格式  
+	            array = valueText.split('-');  
+	            return array[0] + "年" + array[1] + "月";  
+	        }  
+	    });
+        /*$("#focus").slider();*/
+		!function(window,$){
+			"use strict";
+			var oForm=document.getElementById("oForm"),
+				vinNum=document.getElementById('vinNum'),
+				filePlateNumber=document.getElementById("file-plate-number"),
+				mileage=document.getElementById("mileage"),
+				starDate=document.getElementById("starDate"),
+				setDate=document.querySelector(".setDate"),
+				oNext=document.getElementById("next"),
+				oSbt=oNext.querySelector(".btn-next");
+			/*VIN号过滤*/
+			var vinReg=/^[a-zA-Z0-9]{17}$/g;
+			var reg=/(37|38|39|40|8)/g;
+			vinNum.oninput=function(ev){
+				
+				if(!vinReg.test(this.value) && this.value!=""){
+					//提前加好keydown事件，所以选择15;长度为17;
+					
+					forbidBox.call(this,"show");
+				}else{
+					forbidBox.call(this,"no");
+
+				}
+
+			}
+			/*vin小写转大写*/
+			vinNum.onblur=function(){
+				vinNum.value=vinNum.value.toUpperCase();
+			}
+
+			/*里程*/
+			var milReg=/\d(\.\d+)?/g;
+			mileage.onkeydown=function(ev){
+				//this.value=this.value.replace(/\D(([^.])?\D+)?/g,"");
+				this.value=this.value.replace(/[^.|^0-9]{1,15}/g,"");
+				if(this.value.length>16 && !reg.test(ev.keyCode)){
+					forbidBox.call(this,"show");
+					ev.preventDefault();
+					return false;
+				}else{
+					forbidBox.call(this,"no");
+				}
+				
+			}
+
+			/*车牌号图片上传*/
+            
+            /*new modal*/
+            var swipeUpModal=document.querySelector(".swipeUp-modal"),
+                showImgModal=document.querySelector(".showImg-modal");
+            var swipeUp=new modal(swipeUpModal),
+                showImg=new modal(showImgModal);
+            var closeModal=document.querySelector("#close-modal"),
+                $upLodaBtn=$("#upLodaBtn"),
+                delelImg=document.getElementById("delel-img"),
+                showImgLi=document.getElementById("show-img"),
+                $photoList=$(filePlateNumber).parent().find(".photo-list");
+            // 取图片
+            if(localStorage.getItem("img1")!=null){
+                var img = document.createElement("img");
+                    img.src =localStorage.getItem("img1");
+                    $photoList.append(img);
+                    $(img).on("touchstart",function(){
+                        swipeUp.show();
+                    })
+            }
+            //取完缓存图片后检测图片长度
+            if($photoList.children().length>1){
+                $upLodaBtn.hide(); 
+                $photoList.children().eq(0).addClass("hide");
+            }
+			filePlateNumber.addEventListener('change',fileFn);
+            function fileFn(){
+                    lrz(this.files[0])
+                        .then(function (rst) {
+                            // 处理成功会执行
+                            var img = document.createElement("img");
+                            img.src=rst.base64;  
+                            //添加预览图片和input-file                      
+                            $photoList.append(img);
+                            //限制图片长度                           
+                            if($photoList.children().length>0){   
+                                $upLodaBtn.hide(); 
+                                $("#plateNumberImg").addClass("hide");            
+                            }
+                            //给图片添加点击事件
+                            $(img).on("touchstart",function(){
+                                swipeUp.show();
+                            });                      
+                        })
+                        .catch(function (err) {
+                            // 处理失败会执行
+                        })
+                        .always(function () {
+                            // 不管是成功失败，都会执行
+                        });
+            }
+            //取消查看删除
+            $(swipeUpModal).on("touchstart",function(ev){console.log(ev.target)
+                //ev.target==jq来源元素
+                if(closeModal.contains(ev.target)){
+                    swipeUpModal.style.display="none";
+                }else if(delelImg.contains(ev.target)){
+                    //移除图片
+                    $photoList.children().eq(1).remove();
+                    //同时移除localStorage中的缩略图
+                    localStorage.removeItem("img1");
+                    swipeUpModal.style.display="none";
+                    //图片删完了显示描述文字
+                    if($photoList.children().length==1){
+                        $photoList.children().eq(0).removeClass("hide");
+                    }
+                    if($photoList.children().length<6){
+                        $upLodaBtn.show();
+                    } 
+                }else if(showImgLi.contains(ev.target)) {
+                    //查看大图
+                    showImgModal.children[1].children[0].innerHTML='<img src="'+$photoList.children().eq(1).attr("src")+'"/>';
+                    showImg.show();
+                }          
+            })
+
+			/*表单提交验证*/
+            var $mustInput=$(".mustInput");
+            $mustInput.blur(function(){
+            	if(this.value==""){
+                    forbidBox.call(this,"show");                   
+                }else{
+                    forbidBox.call(this,"no");
+                }
+            })
+            oForm.onsubmit=function(){
+                /*空值标记*/
+                var flag=0;
+                $mustInput.each(function(index,item){
+                   	if(this.value==""){
+                    	forbidBox.call(this,"show");
+                    	remind({
+                    		obj:this,
+                    		text:"此项不能为空"
+                    	})
+                    	flag++;
+	                }else{
+	                    forbidBox.call(this,"no");
+	                }               
+                })
+                if(vinNum.value.length!=17){
+                	forbidBox.call(vinNum,"show");
+                	remind({
+                    		obj:this,
+                    		text:"请输入17位VIN号码"
+                    	})
+                	flag++;
+                }
+                if(mileage.value.length>16){
+                	forbidBox.call(mileage,"show");
+                	flag++;
+                }
+                if(flag){
+                    return false;
+                }
+                /*全部通过*/
+                if(flag==0 && mileage.value.length<=16){
+                	/*把值缓存到cookie*/
+                    /*$mustInput.each(function(index,item){
+                         setCookie(this.id,this.value||this.innerHTML,1);         
+                    })  */  
+                    localStorage.setItem("img1",$photoList.children().eq(1).attr("src"));
+                    location.href = "defectInfo.html";               
+                }  
+            }   
+		}(window,jQuery);
+	</script>
+
+</body>
+</html>
